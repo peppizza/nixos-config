@@ -113,6 +113,7 @@
     thunderbird
     protonmail-bridge-gui
     lazygit
+    wootility
   ];
 
   fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
@@ -123,6 +124,7 @@
 
   programs.steam.enable = true;
 
+  hardware.opentabletdriver.enable = true;
   hardware.opengl = {
     enable = true;
     driSupport = true;
