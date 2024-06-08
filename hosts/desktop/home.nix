@@ -11,6 +11,7 @@
     ../../modules/home-manager/osu
     ../../modules/home-manager/tmux.nix
     ../../modules/home-manager/zsh
+    ../../modules/home-manager/git.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
