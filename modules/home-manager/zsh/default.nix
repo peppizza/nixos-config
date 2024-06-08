@@ -7,6 +7,7 @@
     zoxide
     atuin
     oh-my-posh
+    btop
   ];
 
   programs = {
