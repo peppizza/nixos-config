@@ -110,6 +110,9 @@
     nh
     nix-output-monitor
     nvd
+    thunderbird
+    protonmail-bridge-gui
+    lazygit
   ];
 
   fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
