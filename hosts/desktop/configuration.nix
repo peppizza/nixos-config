@@ -87,6 +87,8 @@
 
   hardware.ckb-next.enable = true;
 
+  services.system76-scheduler.enable = true;
+
   system.stateVersion = "24.05"; # DO NOT EDIT
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
