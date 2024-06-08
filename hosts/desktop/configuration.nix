@@ -114,6 +114,7 @@
     protonmail-bridge-gui
     lazygit
     wootility
+    filelight
   ];
 
   fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
@@ -169,6 +170,9 @@
   };
 
   systemd.tmpfiles.rules = [ "w /proc/acpi/wakeup - - - - XHC0" ];
+
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   system.stateVersion = "24.05"; # DO NOT EDIT
 
