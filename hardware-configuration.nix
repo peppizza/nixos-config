@@ -43,6 +43,18 @@
       options = [ "subvol=@home" "compress=zstd" ];
     };
 
+  fileSystems."/media/ssd" =
+    { device = "/dev/disk/by-uuid/58162967-ebbd-4876-8bea-441d5d2dd2b7";
+      fsType = "ext4";
+      options = [ "defaults" ];
+    };
+
+  fileSystems."/media/hdd" =
+    { device = "/dev/disk/by-uuid/e3457adf-d9d6-4663-8928-e42c457930b9";
+      fsType = "ext4";
+      options = [ "defaults" ];
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
