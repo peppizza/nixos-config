@@ -1,6 +1,8 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [ osu-lazer-bin ];
+
   xdg.desktopEntries.osu-lazer = {
     type = "Application";
     name = "osu!lazer";

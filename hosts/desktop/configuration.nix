@@ -106,7 +106,6 @@
     kdePackages.kmines
     prismlauncher
     thunderbird
-    osu-lazer-bin
     nh
     nix-output-monitor
     nvd
@@ -132,8 +131,6 @@
     driSupport = true;
     driSupport32Bit = true;
   };
-
-  nixpkgs.config.allowUnfree = true;
 
   boot.kernelPackages = pkgs-unstable.linuxPackages;
   

@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, ... }: {
+  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, ... }: {
     nixosConfigurations = {
       nixos-desktop = nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
@@ -23,11 +23,21 @@
             inherit system;
             config.allowUnfree = true;
           };
+
+          pkgs = import nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+          };
         };
 
         modules = [
           ./hosts/desktop/configuration.nix
-          inputs.home-manager.nixosModules.default
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.spencer = import ./hosts/desktop/home.nix;
+          }
         ];
       };
     };
