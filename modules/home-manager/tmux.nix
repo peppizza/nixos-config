@@ -29,6 +29,8 @@
 
     keyMode = "vi";
 
+    escapeTime = 0;
+
     extraConfig = ''
       set-option -ga terminal-overrides ",xterm-256color:Tc"
       bind -n M-H previous-window
