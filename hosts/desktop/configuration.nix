@@ -61,6 +61,7 @@
     filelight
     ckb-next
     neovim
+    cider
   ];
 
   fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
