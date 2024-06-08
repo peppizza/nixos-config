@@ -18,11 +18,14 @@
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
 
+  programs.zsh.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.spencer = {
     isNormalUser = true;
     description = "Spencer Vess";
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.zsh;
   };
 
   home-manager = {
@@ -65,6 +68,8 @@
   environment.sessionVariables = {
     FLAKE = "/home/spencer/nixos-config";
   };
+
+  environment.pathsToLink = [ "/share/zsh" ];
 
   programs.steam.enable = true;
 

@@ -39,6 +39,4 @@
       bind % split-window -h -c "#{pane_current_path}"
     '';
   };
-
-  programs.zsh.prezto.tmux.autoStartLocal = true;
 }
