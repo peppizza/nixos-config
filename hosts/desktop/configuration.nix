@@ -98,7 +98,6 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
-    alacritty
     vesktop
     signal-desktop
     kicad
@@ -107,7 +106,15 @@
     kdePackages.kmines
     prismlauncher
     thunderbird
+    osu-lazer-bin
+    nh
+    nix-output-monitor
+    nvd
   ];
+
+  environment.sessionVariables = {
+    FLAKE = "/home/spencer/nixos-config";
+  };
 
   programs.steam.enable = true;
   programs.tmux.enable = true;
