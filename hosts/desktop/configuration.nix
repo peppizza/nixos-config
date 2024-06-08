@@ -117,7 +117,6 @@
   };
 
   programs.steam.enable = true;
-  programs.tmux.enable = true;
 
   hardware.opengl = {
     enable = true;

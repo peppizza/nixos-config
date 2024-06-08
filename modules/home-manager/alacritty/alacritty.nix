@@ -32,10 +32,6 @@
       size = 14;
     };
     env.TERM = "xterm-256color";
-    shell = {
-      program = "${pkgs.tmux}";
-      args = [ "new-session" "-A" "-D" "-s" "main" ];
-    };
     window = {
       decorations = "none";
       startup_mode = "Maximized";

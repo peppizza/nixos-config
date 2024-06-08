@@ -9,6 +9,7 @@
   imports = [
     ../../modules/home-manager/alacritty/alacritty.nix
     ../../modules/home-manager/osu/osu.nix
+    ../../modules/home-manager/tmux.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
