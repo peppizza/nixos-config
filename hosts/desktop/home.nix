@@ -7,8 +7,8 @@
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
   imports = [
-    ../../modules/home-manager/alacritty/alacritty.nix
-    ../../modules/home-manager/osu/osu.nix
+    ../../modules/home-manager/alacritty
+    ../../modules/home-manager/osu
     ../../modules/home-manager/tmux.nix
   ];
 
