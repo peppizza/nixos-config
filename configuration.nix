@@ -2,18 +2,19 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, pkgs-unstable, ... }:
+{ config, lib, pkgs, pkgs-unstable, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.default
     ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "nodev";
+  boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.consoleMode = "max";
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
   # Pick only one of the below networking options.
@@ -80,6 +81,13 @@
     isNormalUser = true;
     description = "Spencer Vess";
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+  };
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "spencer" = import ./home.nix;
+    };
   };
 
   programs.firefox.enable = true;
