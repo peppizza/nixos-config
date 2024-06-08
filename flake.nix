@@ -26,7 +26,7 @@
         };
 
         modules = [
-          ./configuration.nix
+          ./hosts/desktop/configuration.nix
           inputs.home-manager.nixosModules.default
         ];
       };
