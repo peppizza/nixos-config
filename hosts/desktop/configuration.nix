@@ -60,7 +60,6 @@
     wootility
     filelight
     ckb-next
-    neovim
   ];
 
   fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];

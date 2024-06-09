@@ -9,6 +9,7 @@
   imports = [
     ../../modules/home-manager/terminal
     ../../modules/home-manager/osu
+    ../../modules/home-manager/neovim
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

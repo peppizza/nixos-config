@@ -1,0 +1,66 @@
+{
+  imports = [
+    ./neo-tree.nix
+    ./floaterm.nix
+    ./lsp.nix
+    ./alpha.nix
+    ./telescope.nix
+    ./treesitter.nix
+  ];
+
+  programs.nixvim = {
+    colorschemes.catppuccin = {
+      enable = true;
+      flavour = "mocha";
+      settings.integrations = {
+        cmp = true;
+        gitsigns = true;
+        treesitter = true;
+      };
+    };
+
+    keymaps = [
+      { mode = "n"; key = "<leader>gp"; action = "<cmd>Gitsigns preview_hunk<CR>"; options.silent = true; }
+      {
+        mode = "n";
+        key = "<leader>gt";
+        action = "<cmd>Gitsigns toggle_current_line_blame<CR>";
+        options.silent = true;
+      }
+    ];
+
+    plugins = {
+      lualine = {
+        enable = true;
+        theme = "dracula";
+      };
+
+      gitsigns.enable = true;
+
+      tmux-navigator.enable = true;
+
+      fugitive.enable = true;
+
+      nvim-autopairs.enable = true;
+
+      nvim-colorizer = {
+        enable = true;
+        userDefaultOptions.names = false;
+      };
+
+      trim = {
+        enable = true;
+        settings = {
+          highlight = true;
+          ft_blocklist = [
+            "checkhealth"
+            "floaterm"
+            "lspinfo"
+            "neo-tree"
+            "TelescopePrompt"
+          ];
+        };
+      };
+    };
+  };
+}

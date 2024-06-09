@@ -1,4 +1,3 @@
-{ ... }:
 {
   services.zram-generator.enable = true;
   services.zram-generator.settings = {
