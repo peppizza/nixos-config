@@ -80,7 +80,18 @@
     enableSSHSupport = true;
   };
 
-  systemd.tmpfiles.rules = [ "w /proc/acpi/wakeup - - - - XHC0" ];
+  systemd.services."no_wakeup_usb" = {
+    description = "Disable usb wakeup";
+    script = ''
+      echo XHC0 > /proc/acpi/wakeup
+    '';
+    wantedBy = [ "multi-user.target" ];
+    restartIfChanged = false;
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+    };
+  };
 
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
