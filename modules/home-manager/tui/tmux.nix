@@ -4,13 +4,12 @@
     tmux
   ];
 
-
   programs.tmux = {
     enable = true;
     mouse = true;
 
     prefix = "C-space";
-    
+
     baseIndex = 1;
 
     plugins = with pkgs; [

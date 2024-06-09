@@ -7,7 +7,6 @@
     zoxide
     atuin
     oh-my-posh
-    btop
   ];
 
   programs = {
@@ -28,7 +27,7 @@
           };
         }
       ];
-      
+
       history = {
         size = 5000;
         path = "$HOME/.zsh_history";

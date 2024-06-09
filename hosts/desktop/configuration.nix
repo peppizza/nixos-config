@@ -56,7 +56,6 @@
     nvd
     thunderbird
     protonmail-bridge-gui
-    lazygit
     wootility
     filelight
     ckb-next
@@ -103,4 +102,3 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
-
