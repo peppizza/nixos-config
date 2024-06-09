@@ -11,5 +11,6 @@
     lazygit
     ripgrep
     btop
+    fastfetch
   ];
 }

@@ -11,7 +11,7 @@
   programs.nixvim = {
     colorschemes.catppuccin = {
       enable = true;
-      flavour = "mocha";
+      settings.flavour = "mocha";
       settings.integrations = {
         cmp = true;
         gitsigns = true;

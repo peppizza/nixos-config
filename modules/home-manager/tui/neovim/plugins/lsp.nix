@@ -22,10 +22,14 @@
         };
 
         servers = {
-          lua_ls.enable = true;
+          lua-ls.enable = true;
           tsserver.enable = true;
           ccls.enable = true;
-          rust-analyzer.enable = true;
+          rust-analyzer = {
+            enable = true;
+            installCargo = true;
+            installRustc = true;
+          };
         };
       };
     };
