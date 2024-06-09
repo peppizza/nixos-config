@@ -7,10 +7,8 @@
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
   imports = [
-    ../../modules/home-manager/alacritty
+    ../../modules/home-manager/terminal
     ../../modules/home-manager/osu
-    ../../modules/home-manager/tmux.nix
-    ../../modules/home-manager/zsh
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
