@@ -42,6 +42,7 @@
       initExtra = ''
         bindkey "^[[1;5D" backward-word
         bindkey "^[[1;5C" forward-word
+        bindkey "^F" autosuggest-accept
 
         zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
         zstyle ":completion:*" list-colors "''${(s.:.)LS_COLORS}"
