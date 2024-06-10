@@ -5,6 +5,7 @@
     ../../modules/nixos/locale.nix
     ../../modules/nixos/display.nix
     ../../modules/nixos/swap.nix
+    ../../modules/nixos/amdgpu.nix
   ];
 
   boot = {
