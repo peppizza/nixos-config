@@ -58,7 +58,7 @@
     wootility
     filelight
     ckb-next
-    warpinator
+    cinnamon.warpinator
   ];
 
   fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
