@@ -6,6 +6,7 @@
     ./alpha.nix
     ./telescope.nix
     ./treesitter.nix
+    ./which-key.nix
   ];
 
   programs.nixvim = {
