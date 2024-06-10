@@ -50,6 +50,7 @@
     protonmail-bridge-gui
     wootility
     filelight
+    warpinator
   ];
 
   fonts.packages = with pkgs; [
