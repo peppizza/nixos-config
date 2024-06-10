@@ -26,6 +26,7 @@
     description = "Spencer Vess";
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
+    initialPassword = "123456";
   };
 
   home-manager = {
