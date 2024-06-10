@@ -16,10 +16,11 @@
         efiSupport = true;
       };
     };
-    # TODO: initrd.luks.devices.cryptroot.device = "";
   };
 
   networking.hostName = "nixos-laptop";
+  networking.wireless.iwd.enable = true;
+  networking.networkmanager.wifi.backend = "iwd";
 
   programs.zsh.enable = true;
 
