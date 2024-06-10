@@ -1,12 +1,10 @@
-{ pkgs-unstable, config, ... }:
+{ config, ... }:
 {
   hardware.opengl = {
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
   };
-
-  boot.kernelPackages = pkgs-unstable.linuxPackages;
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
