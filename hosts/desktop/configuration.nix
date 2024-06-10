@@ -2,19 +2,25 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, pkgs-unstable, inputs, ... }:
-
+{ pkgs, ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-      ./../../modules/nixos/bootloader.nix
-      ./../../modules/nixos/locale.nix
-      ./../../modules/nixos/display.nix
-      ./../../modules/nixos/nvidia.nix
-      ./../../modules/nixos/swap.nix
+      ../../modules/nixos/locale.nix
+      ../../modules/nixos/display.nix
+      ../../modules/nixos/nvidia.nix
+      ../../modules/nixos/swap.nix
     ];
+
+  boot.loader = {
+    efi.canTouchEfiVariables = true;
+    grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+    };
+  };
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
 
@@ -24,16 +30,9 @@
   users.users.spencer = {
     isNormalUser = true;
     description = "Spencer Vess";
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "input" "video" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     initialPassword = "123456";
-  };
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "spencer" = import ./home.nix;
-    };
   };
 
   programs.firefox.enable = true;
@@ -55,7 +54,6 @@
     nh
     nix-output-monitor
     nvd
-    thunderbird
     protonmail-bridge-gui
     wootility
     filelight
