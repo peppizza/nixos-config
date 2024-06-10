@@ -40,9 +40,7 @@
     git
     vesktop
     signal-desktop
-    kicad
     qalculate-qt
-    bambu-studio
     kdePackages.kmines
     thunderbird
     nh
@@ -53,7 +51,7 @@
     filelight
   ];
 
-  fonts.packages = with pkgs [
+  fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
@@ -71,4 +69,8 @@
   };
 
   services.system76-scheduler.enable = true;
+
+  system.stateVersion = "24.05"; # DO NOT CHANGE
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
