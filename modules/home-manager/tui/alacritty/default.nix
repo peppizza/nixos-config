@@ -39,8 +39,5 @@
     };
 
     shell.program = "tmux";
-
   };
-  # Catppuccin theme for alacritty
-  xdg.configFile."alacritty/catppuccin-mocha.toml".source = ./catppuccin-mocha.toml;
 }

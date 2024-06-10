@@ -99,6 +99,8 @@
 
   services.system76-scheduler.enable = true;
 
+  services.btrfs.autoScrub.enable = true;
+
   system.stateVersion = "24.05"; # DO NOT EDIT
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

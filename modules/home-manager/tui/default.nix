@@ -5,10 +5,10 @@
     ./alacritty
     ./zsh
     ./neovim
+    ./gitui
   ];
 
   home.packages = with pkgs; [
-    lazygit
     ripgrep
     btop
     fastfetch
