@@ -21,7 +21,7 @@
       nixos-desktop = nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
 
-        specialArgs = { 
+        specialArgs = {
           inherit inputs;
 
           pkgs-unstable = import nixpkgs-unstable {
@@ -42,6 +42,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.spencer = import ./hosts/desktop/home.nix;
+            home-manager.extraSpecialArgs = specialArgs;
           }
         ];
       };
