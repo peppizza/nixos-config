@@ -70,6 +70,8 @@
 
   services.system76-scheduler.enable = true;
 
+  services.fprintd.enable = true;
+
   system.stateVersion = "24.05"; # DO NOT CHANGE
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
