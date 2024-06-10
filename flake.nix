@@ -49,6 +49,25 @@
             }
           ];
       };
+
+      nixos-laptop = nixpkgs.lib.nixosSystem rec {
+        inherit system;
+
+        specialArgs = {
+          inherit inputs pkgs pkgs-unstable;
+        };
+
+        modules = [
+          ./hosts/laptop/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.spencer = import ./hosts/laptop/home.nix;
+            home-manager.extraSpecialArgs = specialArgs;
+          }
+        ];
+      };
     };
   };
 }
