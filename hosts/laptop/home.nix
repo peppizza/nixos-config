@@ -1,4 +1,3 @@
-{ config, ... }:
 {
   home.username = "spencer";
   home.homeDirectory = "/home/spencer";
