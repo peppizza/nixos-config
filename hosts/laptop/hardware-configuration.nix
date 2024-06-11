@@ -14,33 +14,31 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/050a8095-0fc2-4f1c-b475-768b2df33ad5";
+    { device = "/dev/disk/by-uuid/d12a7dd6-48d0-469f-8afd-2b91d7810677";
       fsType = "btrfs";
       options = [ "subvol=@" "compress=zstd" ];
     };
 
-  boot.initrd.luks.devices."nixos".device = "/dev/disk/by-uuid/3e435364-b941-49e9-884b-16220add0664";
-
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/050a8095-0fc2-4f1c-b475-768b2df33ad5";
+    { device = "/dev/disk/by-uuid/d12a7dd6-48d0-469f-8afd-2b91d7810677";
       fsType = "btrfs";
       options = [ "subvol=@home" "compress=zstd" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/050a8095-0fc2-4f1c-b475-768b2df33ad5";
+    { device = "/dev/disk/by-uuid/d12a7dd6-48d0-469f-8afd-2b91d7810677";
       fsType = "btrfs";
       options = [ "subvol=@nix" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/var/log" =
-    { device = "/dev/disk/by-uuid/050a8095-0fc2-4f1c-b475-768b2df33ad5";
+    { device = "/dev/disk/by-uuid/d12a7dd6-48d0-469f-8afd-2b91d7810677";
       fsType = "btrfs";
       options = [ "subvol=@log" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/8666-C61B";
+    { device = "/dev/disk/by-uuid/6D96-2962";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
@@ -56,5 +54,4 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  services.auto-epp.enable = true;
 }

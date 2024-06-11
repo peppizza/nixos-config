@@ -79,6 +79,7 @@
   programs.dconf.enable = true;
 
   services.fwupd.enable = true;
+  services.auto-epp.enable = true;
 
   system.stateVersion = "24.05"; # DO NOT CHANGE
 
