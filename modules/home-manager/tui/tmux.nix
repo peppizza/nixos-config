@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    wl-clipboard
+  ];
+
   programs.tmux = {
     enable = true;
     mouse = true;
