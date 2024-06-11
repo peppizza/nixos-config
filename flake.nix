@@ -13,9 +13,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }: {
     nixosConfigurations =
       let
         system = "x86_64-linux";
@@ -60,6 +62,7 @@
             home-manager.users.spencer = import ./hosts/laptop/home.nix;
             home-manager.extraSpecialArgs = specialArgs;
           }
+          nixos-hardware.nixosModules.framework-16-7040-amd
         ];
       };
     };
