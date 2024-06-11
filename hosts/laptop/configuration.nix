@@ -81,6 +81,8 @@
   services.fwupd.enable = true;
   services.auto-epp.enable = true;
 
+  boot.kernelParams = [ "amd_iommu=fullflush" ];
+
   system.stateVersion = "24.05"; # DO NOT CHANGE
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
