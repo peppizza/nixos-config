@@ -24,6 +24,8 @@
   networking.wireless.iwd.enable = true;
   networking.networkmanager.wifi.backend = "iwd";
 
+  hardware.bluetooth.enable = true;
+
   programs.zsh.enable = true;
 
   users.users.spencer = {
