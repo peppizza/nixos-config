@@ -24,7 +24,10 @@
   networking.wireless.iwd.enable = true;
   networking.networkmanager.wifi.backend = "iwd";
 
-  hardware.bluetooth.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+  };
 
   programs.zsh.enable = true;
 
