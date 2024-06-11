@@ -6,11 +6,11 @@
     ./zsh
     ./neovim
     ./gitui
+    ./btop
   ];
 
   home.packages = with pkgs; [
     ripgrep
-    btop
     fastfetch
   ];
 }
