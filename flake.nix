@@ -25,6 +25,11 @@
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
+          overlays = [
+            (self: super: {
+              illuminanced = super.callPackage ./pkgs/illuminanced {};
+            })
+          ];
         };
       in {
         nixos-desktop = nixpkgs.lib.nixosSystem rec {

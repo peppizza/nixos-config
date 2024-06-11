@@ -41,6 +41,7 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
+    # illuminanced
   ];
 
   fonts.packages = with pkgs; [
@@ -71,7 +72,22 @@
 
   services.fwupd.enable = true;
 
-  # boot.kernelParams = [ "amd_iommu=fullflush" ];
+  # services.syslogd.enable = true;
+
+  # systemd.services.illuminanced = {
+  #   description = "Ambient light monitoring Service";
+  #   requires = [ "syslog.socket" ];
+  #   documentation = [ "https://github.com/mikhail-m1/illuminanced" ];
+  #   serviceConfig = {
+  #     Type = "forking";
+  #     ExecStart = "${pkgs.illuminanced} -c /etc/illuminanced.toml";
+  #     PIDFile = "/run/illuminanced.pid";
+  #     Restart = "on-failure";
+  #   };
+  #   wantedBy = [ "multi-user.target" ];
+  # };
+
+  # environment.etc."illuminanced.toml".source = ./illuminanced.toml;
 
   system.stateVersion = "24.05"; # DO NOT CHANGE
 
