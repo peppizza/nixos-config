@@ -21,7 +21,6 @@
   };
 
   networking.hostName = "nixos-laptop";
-  networking.wireless.iwd.enable = true;
   networking.networkmanager.wifi.backend = "iwd";
 
   hardware.bluetooth = {
