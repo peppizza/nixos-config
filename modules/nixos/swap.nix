@@ -13,4 +13,6 @@
     "vm.watermark_scale_factor" = 125;
     "vm.page-cluster" = 0;
   };
+
+  services.fstrim.enable = true;
 }
