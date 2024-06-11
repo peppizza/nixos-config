@@ -72,10 +72,13 @@
   services.system76-scheduler.enable = true;
 
   services.fprintd.enable = true;
+  security.pam.services.login.fprintAuth = false;
 
   services.power-profiles-daemon.enable = true;
 
   programs.dconf.enable = true;
+
+  services.fwupd.enable = true;
 
   system.stateVersion = "24.05"; # DO NOT CHANGE
 
