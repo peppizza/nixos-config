@@ -81,7 +81,7 @@
   services.fwupd.enable = true;
   services.auto-epp.enable = true;
 
-  boot.kernelParams = [ "amd_iommu=fullflush" ];
+  boot.kernelParams = [ "amd_iommu=fullflush" "iommu=soft" ];
 
   system.stateVersion = "24.05"; # DO NOT CHANGE
 
