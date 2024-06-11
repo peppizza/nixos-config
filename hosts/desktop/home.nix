@@ -6,7 +6,6 @@
 
   imports = [
     ../../modules/home-manager/tui
-    ../../modules/home-manager/osu
   ];
 
   # Let Home Manager install and manage itself.

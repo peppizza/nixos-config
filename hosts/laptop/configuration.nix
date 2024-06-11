@@ -6,6 +6,7 @@
     ../../modules/nixos/display.nix
     ../../modules/nixos/swap.nix
     ../../modules/nixos/amdgpu.nix
+    ../../modules/nixos/shared-packages.nix
   ];
 
   boot = {
@@ -36,20 +37,6 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
-    vim
-    wget
-    git
-    vesktop
-    signal-desktop
-    qalculate-qt
-    kdePackages.kmines
-    thunderbird
-    nh
-    nix-output-monitor
-    nvd
-    protonmail-bridge-gui
-    wootility
-    filelight
   ];
 
   fonts.packages = with pkgs; [

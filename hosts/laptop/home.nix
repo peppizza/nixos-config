@@ -7,7 +7,6 @@
 
   imports = [
     ../../modules/home-manager/tui
-    ../../modules/home-manager/osu
   ];
 
   services.easyeffects.enable = true;

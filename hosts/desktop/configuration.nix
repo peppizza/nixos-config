@@ -11,6 +11,7 @@
       ../../modules/nixos/display.nix
       ../../modules/nixos/nvidia.nix
       ../../modules/nixos/swap.nix
+      ../../modules/nixos/shared-packages.nix
     ];
 
   boot.loader = {
@@ -40,23 +41,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    git
-    vesktop
-    signal-desktop
     kicad
-    qalculate-qt
     bambu-studio
-    kdePackages.kmines
     prismlauncher
-    thunderbird
-    nh
-    nix-output-monitor
-    nvd
-    protonmail-bridge-gui
-    wootility
-    filelight
     ckb-next
   ];
 
