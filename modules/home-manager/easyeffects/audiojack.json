@@ -1,0 +1,6 @@
+{
+    "device": "alsa_output.usb-Framework_Audio_Expansion_Card-00.analog-stereo",
+    "device-description": "Audio Expansion Card Analog Stereo",
+    "device-profile": "analog-output",
+    "preset-name": "none"
+}

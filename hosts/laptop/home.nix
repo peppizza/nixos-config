@@ -7,10 +7,8 @@
 
   imports = [
     ../../modules/home-manager/tui
+    ../../modules/home-manager/easyeffects
   ];
-
-  services.easyeffects.enable = true;
-  xdg.configFile."easyeffects/output/fw16profile.json".source = ./FW16effects.json;
 
   programs.home-manager.enable = true;
 }
