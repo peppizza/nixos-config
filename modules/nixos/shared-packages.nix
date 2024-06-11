@@ -16,5 +16,6 @@
     filelight
     qalculate-qt
     osu-lazer-bin
+    nvme-cli
   ];
 }
