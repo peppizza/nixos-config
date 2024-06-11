@@ -79,7 +79,6 @@
   programs.dconf.enable = true;
 
   services.fwupd.enable = true;
-  services.auto-epp.enable = true;
 
   # boot.kernelParams = [ "amd_iommu=fullflush" ];
 
