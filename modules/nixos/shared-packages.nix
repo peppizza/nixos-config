@@ -17,5 +17,6 @@
     qalculate-qt
     osu-lazer-bin
     nvme-cli
+    usbutils
   ];
 }
