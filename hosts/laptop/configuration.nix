@@ -8,7 +8,7 @@
     ../../modules/nixos/amdgpu.nix
     ../../modules/nixos/shared-packages.nix
     ../../modules/nixos/hyprland.nix
-    # ../../modules/nixos/illuminanced
+    ../../modules/nixos/illuminanced
   ];
 
   boot = {
