@@ -18,5 +18,10 @@
     osu-lazer-bin
     nvme-cli
     usbutils
+    aha
+    clinfo
+    glxinfo
+    vulkan-tools
+    wayland-utils
   ];
 }
