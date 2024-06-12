@@ -7,6 +7,12 @@
         action = ":Neotree filesystem reveal left<CR>";
         options.silent = true;
       }
+      {
+        mode = "n";
+        key = "<C-m>";
+        action = ":Neotree close<CR>";
+        options.silent = true;
+      }
     ];
 
     plugins.neo-tree = {
