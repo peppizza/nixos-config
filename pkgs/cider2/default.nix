@@ -27,7 +27,7 @@ in
       in ''
         install -m 444 -D ${contents}/${pname}.desktop -t $out/share/applications
         substituteInPlace $out/share/applications/${pname}.desktop \
-          --replace 'Exec=AppRun' 'Exec=${pname}'
+          --replace-fail 'Exec=AppRun' 'Exec=${pname} --ozone-platform=wayland'
         cp -r ${contents}/usr/share/icons $out/share
       '';
 
