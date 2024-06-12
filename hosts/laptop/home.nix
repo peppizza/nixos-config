@@ -7,6 +7,7 @@
   imports = [
     ../../modules/home-manager/tui
     ../../modules/home-manager/easyeffects
+    ../../modules/home-manager/hyprland
   ];
 
   programs.home-manager.enable = true;
