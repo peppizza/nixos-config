@@ -6,9 +6,9 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = "$HOME/Pictures/wallpaper.jpg";
+      preload = "~/Pictures/wallpaper.jpg";
 
-      wallpaper = "$HOME/Pictures/wallpaper.jpg";
+      wallpaper = "~/Pictures/wallpaper.jpg";
     };
   };
 
@@ -22,6 +22,7 @@
       exec-once = [
         "$terminal"
         "waybar & hyprpaper & firefox"
+        "tmux setenv -g HYPRLAND_INSTANCE_SIGNATURE \"$HYPRLAND_INSTANCE_SIGNATURE\""
       ];
 
       general = {
