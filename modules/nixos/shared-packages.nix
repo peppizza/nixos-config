@@ -25,6 +25,7 @@
     wayland-utils
     ffmpeg-full
     mpv
+    cinnamon.warpinator
   ];
 
   programs.kdeconnect.enable = true;
@@ -33,9 +34,11 @@
   enable = true;
     allowedTCPPortRanges = [
       { from = 1714; to = 1764; } # KDE Connect
+      { from = 42000; to = 42001; } # Warpinator
     ];
     allowedUDPPortRanges = [
       { from = 1714; to = 1764; } # KDE Connect
+      { from = 42000; to = 42000; } # Warpinator
     ];
   };
 }
