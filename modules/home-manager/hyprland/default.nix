@@ -84,19 +84,19 @@
         "$mainModSHIFT, j, movewindow, d"
       ] ++ (
         # workspaces
-        # binds $mainMod + [shift +] {1..9} to [move to] workspace {1..9}
+        # binds $mainMod + [shift +] {1..10} to [move to] workspace {1..10}
         builtins.concatLists (builtins.genList (
           x: let
             ws = let
-              c = (x + 1) / 9;
+              c = (x + 1) / 10;
             in
-              builtins.toString (x + 1 - (c * 9));
+              builtins.toString (x + 1 - (c * 10));
           in [
             "$mainMod, ${ws}, workspace, ${toString (x + 1)}"
             "$mainMod, ${ws}, movetoworkspace, ${toString (x + 1)}"
           ]
         )
-        9)
+        10)
       );
     };
   };
