@@ -7,7 +7,7 @@
     ../../modules/nixos/swap.nix
     ../../modules/nixos/amdgpu.nix
     ../../modules/nixos/shared-packages.nix
-    ../../modules/nixos/hyprland
+    ../../modules/nixos/hyprland.nix
     # ../../modules/nixos/illuminanced
   ];
 
