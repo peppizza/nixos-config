@@ -23,7 +23,8 @@
     glxinfo
     vulkan-tools
     wayland-utils
-    ffmpeg
+    ffmpeg-full
+    mpv
   ];
 
   programs.kdeconnect.enable = true;
