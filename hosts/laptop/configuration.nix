@@ -24,10 +24,7 @@
 
   networking = {
     hostName = "nixos-laptop";
-    networkmanager = {
-      wifi.backend = "iwd";
-      dhcp = "dhcpcd";
-    };
+    networkmanager.wifi.backend = "iwd";
     wireless.iwd.settings.Settings.AutoConnect = true;
   };
 
