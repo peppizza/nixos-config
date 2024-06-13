@@ -22,8 +22,14 @@
     };
   };
 
-  networking.hostName = "nixos-laptop";
-  networking.networkmanager.wifi.backend = "iwd";
+  networking = {
+    hostName = "nixos-laptop";
+    networkmanager = {
+      wifi.backend = "iwd";
+      dhcp = "dhcpcd";
+    };
+    wireless.iwd.settings.Settings.AutoConnect = true;
+  };
 
   hardware.bluetooth = {
     enable = true;
