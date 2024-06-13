@@ -76,6 +76,8 @@
 
   services.fwupd.enable = true;
 
+  security.pam.services.hyprlock = {};
+
   system.stateVersion = "24.05"; # DO NOT CHANGE
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
