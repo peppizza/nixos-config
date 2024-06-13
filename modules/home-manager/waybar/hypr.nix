@@ -77,8 +77,6 @@
 
       #clock,
       #battery,
-      #cpu,
-      #memory,
       #disk,
       #temperature,
       #backlight,
@@ -202,7 +200,7 @@
         height = 24;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "mpd" "idle_inhibitor" "temperature" "cpu" "memory" "network" "pulseaudio" "backlight" "battery" "power-profiles-daemon" "tray" "clock" ];
+        modules-right = [ "mpd" "idle_inhibitor" "temperature" "network" "pulseaudio" "backlight" "battery" "power-profiles-daemon" "tray" "clock" ];
 
         "wlr/workspaces" = {
           format = "{icon}";
@@ -243,10 +241,6 @@
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         };
 
-        cpu.format = "  {usage}%";
-
-        memory.format = "  {}%";
-
         temperature = {
           thermal-zone = 2;
           hwmon-path = "/sys/class/hwmon/hwmon1/temp1_input";
@@ -267,7 +261,7 @@
             warning = 30;
             critical = 15;
           };
-          format = "{icon}  {capacity}%";
+          format = "{icon}   {capacity}%";
           format-charging = "󰂄  {capacity}%";
           format-plugged = "  {capacity}%";
           format-alt = "{icon}  {time}";
