@@ -1,27 +1,18 @@
 { pkgs, ... }:
 {
-  home.file."Pictures/wallpaper.jpg".source = ./wallpaper.jpg;
+  imports = [
+    ../waybar/hypr.nix
+  ];
   programs.wofi.enable = true;
-  programs.waybar.enable = true;
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      preload = "~/Pictures/wallpaper.jpg";
-
-      wallpaper = "~/Pictures/wallpaper.jpg";
-    };
-  };
 
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      "$terminal" = "alacritty";
-      "$fileManager" = "dolphin";
-      "$menu" = "wofi --show drun";
+      monitor = "eDP-1,2560x1600@165,0x0,1.6";
+      workspace = "eDP-1,1";
 
       exec-once = [
-        "$terminal"
-        "waybar & hyprpaper & firefox"
+        "waybar"
         "tmux setenv -g HYPRLAND_INSTANCE_SIGNATURE \"$HYPRLAND_INSTANCE_SIGNATURE\""
       ];
 
@@ -64,14 +55,24 @@
         follow_mouse = 0;
 
         sensitivity = 0;
+
+        touchpad = {
+          natural_scroll = true;
+          middle_button_emulation = true;
+          scroll_factor = 0.5;
+        };
+      };
+
+      gestures = {
+        workspace_swipe = true;
       };
 
       "$mainMod" = "SUPER";
       bind = [
-        "$mainMod, Return, exec, $terminal"
+        "$mainMod, Return, exec, alacritty"
         "$mainModSHIFT, Q, killactive"
         "$mainMod, V, togglefloating"
-        "$mainMod, R, exec, wofi --show run --xoffset=1670 --yoffset=12 --width=230px --height=984 --term=alacritty --prompt=run"
+        "$mainMod, R, exec, wofi --show run"
         "$mainMod, F, fullscreen, 0"
 
         "$mainMod, h, movefocus, l"
