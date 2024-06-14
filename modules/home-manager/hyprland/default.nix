@@ -213,7 +213,6 @@
         ",Print, exec, grim -o $(focusedMonitor)"
 
         "$mainMod, Return, exec, alacritty"
-        "$mainMod, L, exec, loginctl lock-session"
         "$mainModSHIFT, Q, killactive"
         "$mainMod, D, exec, tofi-run | xargs -0 hyprctl dispatch exec"
         "$mainMod, Q, exec, firefox"

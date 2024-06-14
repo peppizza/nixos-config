@@ -30,9 +30,6 @@
         background-color: transparent;
       }
 
-      #workspaces {
-      }
-
       #window {
         margin: 2;
         padding-left: 8;
@@ -75,6 +72,7 @@
         border-bottom: 3px solid #ffffff;
       }
 
+      #workspaces,
       #clock,
       #battery,
       #disk,
