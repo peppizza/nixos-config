@@ -84,6 +84,7 @@
     hyprpicker
     ncmpcpp
     brightnessctl
+    wl-clipboard
   ];
 
   xdg.configFile."wallpaper.jpg".source = ./wallpaper.jpg;
@@ -209,8 +210,8 @@
         ",XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%"
         ",XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
-        "SHIFT, Print, exec, grim -g $(slurp)"
-        ",Print, exec, grim -o $(focusedMonitor)"
+        "SHIFT, Print, exec, slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'%s_grim.png')"
+        ",Print, exec, grim - | wl-copy"
 
         "$mainMod, Return, exec, alacritty"
         "$mainModSHIFT, Q, killactive"
@@ -225,7 +226,7 @@
         "$mainMod, F, fullscreen, 0"
         "$mainMod, Space, togglesplit"
 
-        "$mainMod, P, exec, hyprpicker -a -f hex"
+        # "$mainMod, P, exec, hyprpicker -a -f hex"
 
         "$mainMod, h, movefocus, l"
         "$mainMod, l, movefocus, r"
