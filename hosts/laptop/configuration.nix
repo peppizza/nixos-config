@@ -20,6 +20,7 @@
         efiSupport = true;
       };
     };
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   networking = {

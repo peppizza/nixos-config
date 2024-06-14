@@ -14,13 +14,16 @@
       ../../modules/nixos/shared-packages.nix
     ];
 
-  boot.loader = {
-    efi.canTouchEfiVariables = true;
-    grub = {
-      enable = true;
-      device = "nodev";
-      efiSupport = true;
+  boot = {
+    loader = {
+      efi.canTouchEfiVariables = true;
+      grub = {
+        enable = true;
+        device = "nodev";
+        efiSupport = true;
+      };
     };
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
