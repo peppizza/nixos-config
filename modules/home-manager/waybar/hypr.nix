@@ -76,7 +76,6 @@
       #clock,
       #battery,
       #disk,
-      #temperature,
       #backlight,
       #network,
       #pulseaudio,
@@ -170,10 +169,6 @@
         background-color: #f53c3c;
       }
 
-      #temperature.critical {
-        background-color: #eb4d4b;
-      }
-
       #idle_inhibitor {
         padding-right: 10px;
       }
@@ -198,7 +193,7 @@
         height = 24;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "mpd" "idle_inhibitor" "temperature" "network" "pulseaudio" "backlight" "battery" "power-profiles-daemon" "tray" "clock" ];
+        modules-right = [ "mpd" "idle_inhibitor" "network" "pulseaudio" "backlight" "battery" "power-profiles-daemon" "tray" "clock" ];
 
         "wlr/workspaces" = {
           format = "{icon}";
@@ -237,15 +232,6 @@
 
         clock = {
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-        };
-
-        temperature = {
-          thermal-zone = 2;
-          hwmon-path = "/sys/class/hwmon/hwmon1/temp1_input";
-          critical-threshold = 80;
-          format-critical = "{icon}  {temperatureC}°C";
-          format = "{icon}  {temperatureC}°C";
-          format-icons = [ "" "" "" ];
         };
 
         backlight = {
