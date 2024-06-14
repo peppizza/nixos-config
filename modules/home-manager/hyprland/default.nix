@@ -101,7 +101,7 @@
         "waybar"
         "swaybg -i ~/.config/wallpaper.jpg"
 
-        "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP"
+        "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP QT_QPA_PLATFORMTHEME"
         "dunst"
         "xrandr --output XWAYLAND0 --primary"
         "nm-applet --indicator"
