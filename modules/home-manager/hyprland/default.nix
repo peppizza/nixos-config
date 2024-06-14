@@ -4,9 +4,11 @@
     ../waybar/hypr.nix
     ../tofi.nix
   ];
+
   services.udiskie.enable = true;
   services.dunst.enable = true;
   services.mpd.enable = true;
+
   programs.hyprlock = {
     enable = true;
     settings= {
