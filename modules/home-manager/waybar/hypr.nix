@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    pavucontrol
+    pulsemixer
     mpc-cli
   ];
 
@@ -282,7 +282,7 @@
           format-icons = {
             default = [ "" "" "" ];
           };
-          on-click = "pavucontrol";
+          on-click = "alacritty -e pulsemixer";
         };
       };
     };

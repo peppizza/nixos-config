@@ -196,7 +196,7 @@
 
       windowrulev2 = [
         "workspace 4, class:^(vesktop)$"
-        "workspace 3, class:^(cider)$"
+        "workspace 3, class:^(Cider)$"
         "fullscreen, class:^(mpv)$"
         "opacity 0.93 0.93, class:^(Alacritty)$"
       ];
