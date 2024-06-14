@@ -85,6 +85,7 @@
     ncmpcpp
     brightnessctl
     wl-clipboard
+    playerctl
   ];
 
   xdg.configFile."wallpaper.jpg".source = ./wallpaper.jpg;
@@ -203,12 +204,15 @@
       "$mainMod" = "SUPER";
 
       bind = [
-        ",XF86AudioPlay, exec, playerctl -p \"mpd\" play-pause"
-        ",XF86AudioPrev, exec, playerctl -p \"mpd\" previous"
-        ",XF86AudioNext, exec, playerctl -p \"mpd\" next"
+        ",XF86AudioPlay, exec, playerctl -p \"cider\" play-pause"
+        ",XF86AudioPrev, exec, playerctl -p \"cider\" previous"
+        ",XF86AudioNext, exec, playerctl -p \"cider\" next"
         ",XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%"
         ",XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%"
         ",XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
+
+        ",XF86MonBrightnessUp, exec, brightnessctl -s set +25"
+        ",XF86MonBrightnessDown, exec, brightnessctl -s set 25-"
 
         "SHIFT, Print, exec, slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'%s_grim.png')"
         ",Print, exec, grim - | wl-copy"
