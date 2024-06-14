@@ -23,7 +23,7 @@
         efiSupport = true;
       };
     };
-    kernelPackages = pkgs.linuxPackages_latest;
+    # kernelPackages = pkgs.linuxPackages_latest;
   };
 
   networking.hostName = "nixos-desktop"; # Define your hostname.
