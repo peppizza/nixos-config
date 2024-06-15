@@ -2,11 +2,11 @@
 {
   imports = [
     ./tmux.nix
-    ./alacritty
+    ./alacritty.nix
     ./zsh
     ./neovim
-    ./gitui
-    ./btop
+    ./gitui.nix
+    ./btop.nix
   ];
 
   home.packages = with pkgs; [
