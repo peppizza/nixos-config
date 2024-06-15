@@ -5,8 +5,15 @@
     ../tofi.nix
   ];
 
-  services.udiskie.enable = true;
-  services.dunst.enable = true;
+  services = {
+    udiskie.enable = true;
+    dunst = {
+      enable = true;
+      catppuccin.enable = true;
+    };
+  };
+  stylix.targets.dunst.enable = false;
+
   services.mpd.enable = true;
 
   programs.hyprlock = {
@@ -90,7 +97,7 @@
     playerctl
   ];
 
-  xdg.configFile."wallpaper.png".source = ./wallpaper.png;
+  xdg.configFile."wallpaper.png".source = ../../../wallpaper.png;
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -120,8 +127,8 @@
 
         border_size = 2;
 
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
+        # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+        # "col.inactive_border" = "rgba(595959aa)";
 
         layout = "dwindle";
 
@@ -146,7 +153,7 @@
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
+        # "col.shadow" = "rgba(1a1a1aee)";
         dim_inactive = false;
       };
 

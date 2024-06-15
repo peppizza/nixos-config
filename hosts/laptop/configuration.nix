@@ -18,10 +18,13 @@
         enable = true;
         device = "nodev";
         efiSupport = true;
+        catppuccin.enable = true;
       };
     };
     kernelPackages = pkgs.linuxPackages_latest;
   };
+
+  console.catppuccin.enable = true;
 
   networking = {
     hostName = "nixos-laptop";
@@ -78,9 +81,15 @@
 
   security.pam.services.hyprlock = {};
 
-  catppuccin = {
+  catppuccin.flavor = "mocha";
+
+  stylix = {
     enable = true;
-    flavor = "mocha";
+    image = ../../wallpaper.png;
+    targets = {
+      grub.enable = false;
+      console.enable = false;
+    };
   };
 
   system.stateVersion = "24.05"; # DO NOT CHANGE

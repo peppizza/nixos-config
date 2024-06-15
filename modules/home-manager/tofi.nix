@@ -24,5 +24,8 @@
       hint-font = false;
       placeholder-text = "input";
     };
+
+    catppuccin.enable = true;
   };
+  stylix.targets.tofi.enable = false;
 }

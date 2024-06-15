@@ -19,9 +19,11 @@
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     catppuccin.url = "github:catppuccin/nix";
+
+    stylix.url = "github:danth/stylix";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, catppuccin, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, catppuccin, stylix, ... }: {
     nixosConfigurations =
       let
         system = "x86_64-linux";
@@ -78,6 +80,7 @@
           }
           nixos-hardware.nixosModules.framework-16-7040-amd
           catppuccin.nixosModules.catppuccin
+          stylix.nixosModules.stylix
         ];
       };
     };

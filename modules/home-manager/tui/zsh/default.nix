@@ -14,7 +14,10 @@
       enable = true;
       enableCompletion = true;
       autosuggestion.enable = true;
-      syntaxHighlighting.enable = true;
+      syntaxHighlighting = {
+        enable = true;
+        catppuccin.enable = true;
+      };
 
       plugins = [
         {
