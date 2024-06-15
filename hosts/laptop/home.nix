@@ -10,5 +10,7 @@
     ../../modules/home-manager/hyprland
   ];
 
+  catppuccin.enable = true;
+
   programs.home-manager.enable = true;
 }

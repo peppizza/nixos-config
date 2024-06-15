@@ -17,9 +17,11 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+
+    catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, catppuccin, ... }: {
     nixosConfigurations =
       let
         system = "x86_64-linux";
@@ -66,10 +68,16 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.spencer = import ./hosts/laptop/home.nix;
+            home-manager.users.spencer = {
+              imports = [
+                ./hosts/laptop/home.nix
+                catppuccin.homeManagerModules.catppuccin
+              ];
+            };
             home-manager.extraSpecialArgs = specialArgs;
           }
           nixos-hardware.nixosModules.framework-16-7040-amd
+          catppuccin.nixosModules.catppuccin
         ];
       };
     };

@@ -11,8 +11,8 @@
       prompt-text = "Enter Input > ";
       outline-width = 0;
       border-width = 0;
-      background-color = "#1d1f21";
-      selection-color = "#268bd2";
+      # background-color = "#1d1f21";
+      # selection-color = "#268bd2";
       selection-background = "#444";
       num-results = 10;
       min-input-width = 240;

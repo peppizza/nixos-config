@@ -33,7 +33,6 @@
     enable = true;
     powerOnBoot = false;
   };
-
   programs.zsh.enable = true;
 
   users.users.spencer = {
@@ -78,6 +77,11 @@
   services.fwupd.enable = true;
 
   security.pam.services.hyprlock = {};
+
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+  };
 
   system.stateVersion = "24.05"; # DO NOT CHANGE
 

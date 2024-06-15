@@ -2,8 +2,6 @@
   programs.alacritty.enable = true;
 
   programs.alacritty.settings = {
-    import = [ ./catppuccin-mocha.toml ];
-
     live_config_reload = true;
     mouse.hide_when_typing = true;
     bell = {
