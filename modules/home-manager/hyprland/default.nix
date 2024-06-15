@@ -170,7 +170,7 @@
         ",XF86MonBrightnessUp, exec, brightnessctl -s set +25"
         ",XF86MonBrightnessDown, exec, brightnessctl -s set 25-"
 
-        "SHIFT, Print, exec, slurp | grim -g - $(xdg-user-dir PICTURES)/$(date +'%s_grim.png')"
+        "SHIFT, Print, exec, slurp | grim -g - - | wl-copy"
         ",Print, exec, grim - | wl-copy"
 
         "$mainMod, Return, exec, alacritty"
