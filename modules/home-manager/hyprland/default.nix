@@ -184,7 +184,7 @@
         "$mainMod, F, fullscreen, 0"
         "$mainMod, Space, togglesplit"
 
-        # "$mainMod, P, exec, hyprpicker -a -f hex"
+        "$mainModSHIFT, L, exec, loginctl lock-session"
 
         "$mainMod, h, movefocus, l"
         "$mainMod, l, movefocus, r"
