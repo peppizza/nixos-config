@@ -8,8 +8,6 @@
     enable = true;
     mouse = true;
 
-    catppuccin.enable = true;
-
     prefix = "C-space";
 
     baseIndex = 1;

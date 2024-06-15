@@ -5,7 +5,6 @@
     ./alacritty.nix
     ./zsh
     ./neovim
-    ./gitui.nix
     ./btop.nix
   ];
 
@@ -14,11 +13,5 @@
     fastfetch
   ];
 
-  stylix.targets = {
-    tmux.enable = false;
-    alacritty.enable = false;
-    nixvim.enable = false;
-    gitui.enable = false;
-    btop.enable = false;
-  };
+  programs.lazygit.enable = true;
 }

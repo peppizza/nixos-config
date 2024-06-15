@@ -24,8 +24,6 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
-  console.catppuccin.enable = true;
-
   networking = {
     hostName = "nixos-laptop";
     networkmanager.wifi.backend = "iwd";
@@ -92,8 +90,8 @@
     image = ../../wallpaper.png;
     targets = {
       grub.enable = false;
-      console.enable = false;
     };
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
   };
 
   system.stateVersion = "24.05"; # DO NOT CHANGE

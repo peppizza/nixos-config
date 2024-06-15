@@ -4,6 +4,5 @@
     settings = {
       vim_keys = true;
     };
-    catppuccin.enable = true;
   };
 }

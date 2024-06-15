@@ -9,10 +9,8 @@
     udiskie.enable = true;
     dunst = {
       enable = true;
-      catppuccin.enable = true;
     };
   };
-  stylix.targets.dunst.enable = false;
 
   services.mpd.enable = true;
 

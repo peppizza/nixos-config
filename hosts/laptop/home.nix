@@ -10,8 +10,6 @@
     ../../modules/home-manager/hyprland
   ];
 
-  catppuccin.enable = true;
-
   stylix.targets.kde.enable = false;
 
   programs.home-manager.enable = true;

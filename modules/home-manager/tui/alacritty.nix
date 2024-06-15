@@ -34,4 +34,5 @@
       shell.program = "tmux";
     };
   };
+  stylix.targets.alacritty.enable = false;
 }

@@ -18,4 +18,5 @@
 
     luaLoader.enable = true;
   };
+  stylix.targets.nixvim.enable = false;
 }
