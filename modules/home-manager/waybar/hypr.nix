@@ -232,7 +232,7 @@
 
         clock = {
           format = "{:%I:%M %p}";
-          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+          tooltip-format = "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>";
         };
 
         backlight = {
