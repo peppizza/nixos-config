@@ -36,6 +36,8 @@
     enable = true;
     powerOnBoot = false;
   };
+  services.blueman.enable = true;
+
   programs.zsh.enable = true;
 
   users.users.spencer = {

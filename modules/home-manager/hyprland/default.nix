@@ -117,6 +117,7 @@
         "udiskie"
         "mpd"
         "hypridle"
+        "blueman-applet"
       ];
 
       env = "XCURSOR_SIZE,24";
