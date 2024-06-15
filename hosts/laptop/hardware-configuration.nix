@@ -14,31 +14,33 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/d12a7dd6-48d0-469f-8afd-2b91d7810677";
+    { device = "/dev/disk/by-uuid/d302ac34-86de-4f82-9183-f68383a37a5f";
       fsType = "btrfs";
       options = [ "subvol=@" "compress=zstd" ];
     };
 
+  boot.initrd.luks.devices."nixos".device = "/dev/disk/by-uuid/e7165442-d733-4ce8-8fe4-88d68f3ca9ea";
+
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/d12a7dd6-48d0-469f-8afd-2b91d7810677";
+    { device = "/dev/disk/by-uuid/d302ac34-86de-4f82-9183-f68383a37a5f";
       fsType = "btrfs";
       options = [ "subvol=@home" "compress=zstd" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/d12a7dd6-48d0-469f-8afd-2b91d7810677";
+    { device = "/dev/disk/by-uuid/d302ac34-86de-4f82-9183-f68383a37a5f";
       fsType = "btrfs";
-      options = [ "subvol=@nix" "compress=zstd" "noatime" ];
+      options = [ "subvol=@nix" "noatime" "compress=zstd" ];
     };
 
   fileSystems."/var/log" =
-    { device = "/dev/disk/by-uuid/d12a7dd6-48d0-469f-8afd-2b91d7810677";
+    { device = "/dev/disk/by-uuid/d302ac34-86de-4f82-9183-f68383a37a5f";
       fsType = "btrfs";
-      options = [ "subvol=@log" "compress=zstd" "noatime" ];
+      options = [ "subvol=@log" "noatime" "compress=zstd" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/6D96-2962";
+    { device = "/dev/disk/by-uuid/F524-1E83";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
