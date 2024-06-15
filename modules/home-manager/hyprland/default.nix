@@ -5,6 +5,7 @@
     ../tofi.nix
     ./hyprlock.nix
     ./hypridle.nix
+    ../pcmanfm
   ];
 
   services = {
@@ -177,7 +178,7 @@
         "$mainMod, D, exec, tofi-run | xargs -0 hyprctl dispatch exec"
         "$mainMod, Q, exec, firefox"
         "$mainMod, F1, exec, alacritty -e ncmpcpp"
-        "$mainMod ALT, F, exec, dolphin"
+        "$mainMod ALT, F, exec, pcmanfm"
         "$mainMod ALT, S, exec, cider --ozone-platform=wayland"
         "$mainMod ALT, S, exec, vesktop"
         "$mainMod ALT, O, exec, gamescope -W 2560 -H 1600 -r 165 osu\\!"
@@ -186,7 +187,7 @@
         "$mainMod, F, fullscreen, 0"
         "$mainMod, Space, togglesplit"
 
-        "$mainModSHIFT, L, exec, loginctl lock-session"
+        "$mainMod ALT, L, exec, loginctl lock-session"
 
         "$mainMod, h, movefocus, l"
         "$mainMod, l, movefocus, r"
