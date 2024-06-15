@@ -95,6 +95,8 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
   };
 
+  programs.gamescope.enable = true;
+
   system.stateVersion = "24.05"; # DO NOT CHANGE
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
