@@ -83,6 +83,8 @@
 
   catppuccin.flavor = "mocha";
 
+  services.displayManager.sddm.catppuccin.enable = true;
+
   stylix = {
     enable = true;
     image = ../../wallpaper.png;
