@@ -13,6 +13,7 @@
   };
 
   services.mpd.enable = true;
+  services.mpdris2.enable = true;
 
   programs.hyprlock = {
     enable = true;
@@ -81,7 +82,6 @@
       ];
     };
   };
-  xdg.userDirs.enable = true;
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
@@ -117,7 +117,6 @@
         "xrandr --output XWAYLAND0 --primary"
         "nm-applet --indicator"
         "udiskie"
-        "mpd"
         "hypridle"
         "blueman-applet"
       ];
