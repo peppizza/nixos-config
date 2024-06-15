@@ -82,6 +82,10 @@
     };
   };
   xdg.userDirs.enable = true;
+  xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
+  };
 
   home.packages = with pkgs; [
     swaybg
@@ -211,6 +215,13 @@
 
       "$mainMod" = "SUPER";
 
+      bindm = [
+        "$mainMod, mouse:272, movewindow"
+        "$mainMod, Control_L, movewindow"
+        "$mainMod, mouse:273, resizewindow"
+        "$mainMod, ALT_L, resizewindow"
+      ];
+
       bind = [
         ",XF86AudioPlay, exec, playerctl -p \"cider\" play-pause"
         ",XF86AudioPrev, exec, playerctl -p \"cider\" previous"
@@ -249,9 +260,6 @@
         "$mainModSHIFT, l, movewindow, r"
         "$mainModSHIFT, k, movewindow, u"
         "$mainModSHIFT, j, movewindow, d"
-
-        "$mainMod, mouse:272, movewindow"
-        "$mainMod, mouse:273, resizewindowpixel"
       ] ++ (
         # workspaces
         # binds $mainMod + [shift +] {1..10} to [move to] workspace {1..10}
