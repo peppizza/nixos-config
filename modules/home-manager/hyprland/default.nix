@@ -21,7 +21,7 @@
 
       background = [
         {
-          path = "~/.config/wallpaper.jpg";
+          path = "~/.config/wallpaper.png";
           blur_passes = 3;
           blur_size = 8;
         }
@@ -90,7 +90,7 @@
     playerctl
   ];
 
-  xdg.configFile."wallpaper.jpg".source = ./wallpaper.jpg;
+  xdg.configFile."wallpaper.png".source = ./wallpaper.png;
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -101,7 +101,7 @@
       exec-once = [
         "tmux setenv -g HYPRLAND_INSTANCE_SIGNATURE \"$HYPRLAND_INSTANCE_SIGNATURE\""
         "waybar"
-        "swaybg -i ~/.config/wallpaper.jpg"
+        "swaybg -i ~/.config/wallpaper.png"
 
         "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP QT_QPA_PLATFORMTHEME"
         "dunst"
