@@ -5,7 +5,6 @@
     ../tofi.nix
     ./hyprlock.nix
     ./hypridle.nix
-    ../pcmanfm
   ];
 
   services = {
@@ -159,7 +158,7 @@
         "$mainMod, ALT_L, resizewindow"
       ];
 
-      bind = [
+      binde = [
         ",XF86AudioPlay, exec, playerctl -p \"cider\" play-pause"
         ",XF86AudioPrev, exec, playerctl -p \"cider\" previous"
         ",XF86AudioNext, exec, playerctl -p \"cider\" next"
@@ -169,7 +168,9 @@
 
         ",XF86MonBrightnessUp, exec, brightnessctl -s set +25"
         ",XF86MonBrightnessDown, exec, brightnessctl -s set 25-"
+      ];
 
+      bind = [
         "SHIFT, Print, exec, slurp | grim -g - - | wl-copy"
         ",Print, exec, grim - | wl-copy"
 
@@ -178,7 +179,7 @@
         "$mainMod, D, exec, tofi-run | xargs -0 hyprctl dispatch exec"
         "$mainMod, Q, exec, firefox"
         "$mainMod, F1, exec, alacritty -e ncmpcpp"
-        "$mainMod ALT, F, exec, pcmanfm"
+        "$mainMod ALT, F, exec, dolphin"
         "$mainMod ALT, S, exec, cider --ozone-platform=wayland"
         "$mainMod ALT, S, exec, vesktop"
         "$mainMod ALT, O, exec, gamescope -W 2560 -H 1600 -r 165 osu\\!"
