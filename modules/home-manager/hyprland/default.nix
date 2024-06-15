@@ -23,7 +23,6 @@
   };
 
   home.packages = with pkgs; [
-    swaybg
     networkmanagerapplet
     grim
     slurp
@@ -45,7 +44,6 @@
       exec-once = [
         "tmux setenv -g HYPRLAND_INSTANCE_SIGNATURE \"$HYPRLAND_INSTANCE_SIGNATURE\""
         "waybar"
-        "swaybg -i ~/.config/wallpaper.png"
 
         "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP QT_QPA_PLATFORMTHEME"
         "dunst"
@@ -54,7 +52,10 @@
         "udiskie"
         "hypridle"
         "blueman-applet"
+        "swww-daemon"
       ];
+
+      exec = "swww img ~/.config/wallpaper.png";
 
       env = "XCURSOR_SIZE,24";
 

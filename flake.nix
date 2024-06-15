@@ -18,6 +18,8 @@
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
+    swww.url = "github:LGFae/swww";
+
     catppuccin.url = "github:catppuccin/nix";
 
     stylix.url = "github:danth/stylix";

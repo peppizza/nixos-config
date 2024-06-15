@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -49,6 +49,7 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
+    inputs.swww.packages.${pkgs.system}.swww
   ];
 
   fonts.packages = with pkgs; [
