@@ -231,6 +231,7 @@
         tray.spacing = 10;
 
         clock = {
+          format = "{:%I:%M %p}";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         };
 
@@ -283,6 +284,7 @@
             default = [ "" "" "" ];
           };
           on-click = "alacritty -e pulsemixer";
+          ignored-sinks = [ "Easy Effects Sink" ];
         };
       };
     };
