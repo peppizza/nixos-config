@@ -53,9 +53,16 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.spencer = import ./hosts/desktop/home.nix;
+              home-manager.users.spencer = {
+                imports = [
+                  ./hosts/desktop/home.nix
+                  catppuccin.homeManagerModules.catppuccin
+                ];
+              };
               home-manager.extraSpecialArgs = specialArgs;
             }
+            catppuccin.nixosModules.catppuccin
+            stylix.nixosModules.stylix
           ];
       };
 

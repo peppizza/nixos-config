@@ -90,6 +90,14 @@
 
   services.btrfs.autoScrub.enable = true;
 
+  catppuccin.flavor = "mocha";
+
+  stylix = {
+    enable = true;
+    image = ../../wallpaper.png;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  };
+
   system.stateVersion = "24.05"; # DO NOT EDIT
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
