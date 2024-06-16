@@ -53,7 +53,12 @@
 
       exec = "swww img ~/.config/wallpaper.png";
 
-      env = "XCURSOR_SIZE,24";
+      xwayland.force_zero_scaling = true;
+
+      env = [
+        "XCURSOR_SIZE,24"
+        "GDK_SCALE,1.6"
+      ];
 
       general = {
         gaps_in = 3;
