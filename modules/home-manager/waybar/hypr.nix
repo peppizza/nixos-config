@@ -83,7 +83,7 @@
       #tray,
       #mode,
       #idle_inhibitor,
-      #mpd,
+      #mpris,
       #power-profiles-daemon {
         margin: 2px;
         padding-left: 5px;
@@ -193,31 +193,28 @@
         height = 24;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "mpd" "idle_inhibitor" "network" "pulseaudio" "backlight" "battery" "power-profiles-daemon" "tray" "clock" ];
+        modules-right = [ "mpris" "idle_inhibitor" "network" "pulseaudio" "backlight" "battery" "power-profiles-daemon" "tray" "clock" ];
 
         "wlr/workspaces" = {
           format = "{icon}";
           on-click = "activate";
         };
 
-        mpd = {
-          format = "  {title} - {artist} {stateIcon} [{elapsedTime:%M:%S}/{totalTime:%M:%S}] {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}[{songPosition}/{queueLength}]";
-          format-disconnected = "  Disconnected";
-          format-stopped = "  {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped";
-          unknown-tag = "N/A";
+        mpris = {
+          format = "{player_icon} {dynamic}";
+          format-paused = "{status_icon} <i>{dynamic}</i>";
           interval = 2;
-          consume-icons.on = " ";
-          repeat-icons.on = " ";
-          single-icons.on = " 1 ";
-          state-icons = {
+          player-icons = {
+            default = "";
+            mpd = "";
+            cider = "";
+            mpv = "";
+            firefox = "";
+          };
+          status-icons = {
             paused = "";
             playing = "";
           };
-          tooltip-format = "MPD (connected)";
-          tooltip-format-disconnected = "MPD (disconnected)";
-          on-click = "mpc toggle";
-          on-scroll-up = "mpc volume +5";
-          on-scroll-down = "mpc volume -2";
         };
 
         idle_inhibitor = {

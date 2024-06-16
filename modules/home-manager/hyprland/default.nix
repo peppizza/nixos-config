@@ -5,6 +5,7 @@
     ../tofi.nix
     ./hyprlock.nix
     ./hypridle.nix
+    ./mpd.nix
   ];
 
   services = {
@@ -13,9 +14,6 @@
       enable = true;
     };
   };
-
-  services.mpd.enable = true;
-  services.mpdris2.enable = true;
 
   xdg.userDirs = {
     enable = true;
@@ -27,10 +25,8 @@
     grim
     slurp
     hyprpicker
-    ncmpcpp
     brightnessctl
     wl-clipboard
-    playerctl
   ];
 
   xdg.configFile."wallpaper.png".source = ../../../wallpaper.png;
@@ -38,7 +34,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      monitor = "eDP-1,2560x1600@165,0x0,1.6";
+      monitor = "eDP-1,2560x1600@165,0x0,1.6,vrr,2";
       workspace = "eDP-1,1";
 
       exec-once = [
@@ -159,18 +155,19 @@
       ];
 
       binde = [
-        ",XF86AudioPlay, exec, playerctl -p \"cider\" play-pause"
-        ",XF86AudioPrev, exec, playerctl -p \"cider\" previous"
-        ",XF86AudioNext, exec, playerctl -p \"cider\" next"
         ",XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%"
         ",XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%"
-        ",XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
         ",XF86MonBrightnessUp, exec, brightnessctl -s set +25"
         ",XF86MonBrightnessDown, exec, brightnessctl -s set 25-"
       ];
 
       bind = [
+        ",XF86AudioPlay, exec, playerctl -p \"playerctld\" play-pause"
+        ",XF86AudioPrev, exec, playerctl -p \"playerctld\" previous"
+        ",XF86AudioNext, exec, playerctl -p \"playerctld\" next"
+        ",XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
+
         "SHIFT, Print, exec, slurp | grim -g - - | wl-copy"
         ",Print, exec, grim - | wl-copy"
 
