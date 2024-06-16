@@ -206,7 +206,7 @@
           interval = 2;
           player-icons = {
             default = "";
-            mpd = "";
+            mpd = "󰝚";
             cider = "";
             mpv = "";
             firefox = "";
