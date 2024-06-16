@@ -21,7 +21,7 @@
         {
           timeout = 330; # 5.5 minutes
           on-timeout = "hyprctl dispatch dpms off";
-          on-resume = "hyprctl dispatch dpmms on";
+          on-resume = "hyprctl dispatch dpms on";
         }
         {
           timeout = 1800; # 30 minutes
