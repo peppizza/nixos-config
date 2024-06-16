@@ -44,6 +44,8 @@
 
       nvim-autopairs.enable = true;
 
+      neocord.enable = true;
+
       nvim-colorizer = {
         enable = true;
         userDefaultOptions.names = false;
