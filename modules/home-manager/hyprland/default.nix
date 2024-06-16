@@ -177,6 +177,7 @@
 
         "SHIFT, Print, exec, slurp | grim -g - - | wl-copy"
         ",Print, exec, grim - | wl-copy"
+        "$mainMod, P, exec, hyprpicker -a -f hex"
 
         "$mainMod, Return, exec, alacritty"
         "$mainModSHIFT, Q, killactive"
