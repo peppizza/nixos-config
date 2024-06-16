@@ -11,6 +11,7 @@
   home.packages = with pkgs; [
     ripgrep
     fastfetch
+    tree
   ];
 
   programs.lazygit.enable = true;
