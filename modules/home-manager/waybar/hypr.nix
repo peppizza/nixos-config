@@ -228,7 +228,7 @@
         tray.spacing = 10;
 
         clock = {
-          format = "{:%I:%M %p}";
+          format = "{:%a %I:%M %p}";
           tooltip-format = "<big>{:%Y %B %d}</big>\n<tt><small>{calendar}</small></tt>";
         };
 
