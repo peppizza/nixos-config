@@ -71,6 +71,8 @@
 
   services.system76-scheduler.enable = true;
 
+  services.btrfs.autoScrub.enable = true;
+
   services.fprintd.enable = true;
   security.pam.services.login.fprintAuth = false;
 
