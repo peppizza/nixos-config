@@ -4,7 +4,7 @@
     settings = {
       general = {
         lock_cmd = "pidof hyprlock || hyprlock";
-        before_sleep_cmd = "loginctl lock-session";
+        before_sleep_cmd = "playerctl -p \"playerctld\" stop; loginctl lock-session";
         after_sleep_cmd = "hyprctl dispatch dpms on";
       };
 
@@ -16,7 +16,7 @@
         }
         {
           timeout = 300; # 5 minutes
-          on-timeout = "loginctl lock-session";
+          on-timeout = "playerctl -p \"playerctld\" stop; loginctl lock-session";
         }
         {
           timeout = 330; # 5.5 minutes
