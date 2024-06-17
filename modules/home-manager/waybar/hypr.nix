@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     pulsemixer
-    mpc-cli
+    helvum
   ];
 
   programs.waybar = {
@@ -193,7 +193,7 @@
         height = 24;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "mpris" "idle_inhibitor" "network" "pulseaudio" "backlight" "battery" "power-profiles-daemon" "tray" "clock" ];
+        modules-right = [ "mpris" "idle_inhibitor" "network" "wireplumber" "backlight" "battery" "power-profiles-daemon" "tray" "clock" ];
 
         "wlr/workspaces" = {
           format = "{icon}";
@@ -272,16 +272,17 @@
           format-alt = "   {ifname}: {ipaddr}/{cidr}";
         };
 
-        pulseaudio = {
+        wireplumber = {
           scroll-step = 5;
-          format = "{icon}   {volume}% {format_source}";
-          format-bluetooth = " {icon}  {volume}% {format_source}";
-          format-bluetooth-muted = "  {icon}  {format_source}";
-          format-muted = " {format_source}";
+          format = "{icon}   {volume}% {node_name}";
+          format-bluetooth = " {icon}  {volume}% {node_name}";
+          format-bluetooth-muted = "  {icon}  {node_name}";
+          format-muted = " {node_name}";
           format-icons = {
             default = [ "" "" "" ];
           };
           on-click = "alacritty -e pulsemixer";
+          on-click-right = "helvum";
           ignored-sinks = [ "Easy Effects Sink" ];
         };
       };
