@@ -51,7 +51,7 @@
         "swww-daemon"
       ];
 
-      exec = "swww img ~/.config/wallpaper.png";
+      exec = "sleep 0.3; swww img ~/.config/wallpaper.png";
 
       xwayland.force_zero_scaling = true;
 
