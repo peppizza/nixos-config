@@ -187,7 +187,7 @@
         "$mainMod ALT, F, exec, dolphin"
         "$mainMod ALT, S, exec, cider --ozone-platform=wayland"
         "$mainMod ALT, S, exec, vesktop"
-        "$mainMod ALT, O, exec, gamescope -W 2560 -H 1600 -r 165 osu\\!"
+        "$mainMod ALT, O, exec, gamemoderun gamescope -W 2560 -H 1600 -r 165 osu\\!"
 
         "$mainMod, O, togglefloating"
         "$mainMod, F, fullscreen, 0"

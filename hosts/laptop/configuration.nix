@@ -99,6 +99,7 @@
   };
 
   programs.gamescope.enable = true;
+  programs.gamemode.enable = true;
 
   system.stateVersion = "24.05"; # DO NOT CHANGE
 
