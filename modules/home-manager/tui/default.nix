@@ -10,9 +10,38 @@
 
   home.packages = with pkgs; [
     ripgrep
-    fastfetch
+    blahaj
     tree
   ];
 
   programs.lazygit.enable = true;
+
+  programs.fastfetch = {
+    enable = true;
+    settings = {
+      logo = {
+        source = "nixos_small";
+        padding.right = 1;
+      };
+
+      display.size = {
+        maxPrefix = "MB";
+        ndigits = 0;
+      };
+
+      modules = [
+        "title"
+        "separator"
+        "os"
+        "kernel"
+        "shell"
+        "wm"
+        "cpu"
+        {
+          type = "gpu";
+          key = "GPU";
+        }
+      ];
+    };
+  };
 }

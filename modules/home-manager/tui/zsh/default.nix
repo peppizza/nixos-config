@@ -56,6 +56,8 @@
         zstyle ":fzf-tab:*" fzf-command ftb-tmux-popup
         zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "eza -1 --color=always $realpath"
 
+        eval "fastfetch | blahaj"
+
         eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/zen.toml)"
       '';
     };
