@@ -202,6 +202,7 @@
 
         mpris = {
           format = "{player_icon} {dynamic}";
+          dynamic-len = 30;
           format-paused = "{status_icon} <i>{dynamic}</i>";
           interval = 2;
           player-icons = {
