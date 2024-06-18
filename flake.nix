@@ -23,9 +23,14 @@
     catppuccin.url = "github:catppuccin/nix";
 
     stylix.url = "github:danth/stylix";
+
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, catppuccin, stylix, ... }: {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, catppuccin, stylix, rust-overlay, ... }: {
     nixosConfigurations =
       let
         system = "x86_64-linux";
@@ -37,6 +42,7 @@
             (self: super: {
               illuminanced = super.callPackage ./pkgs/illuminanced {};
             })
+            rust-overlay.overlays.default
           ];
         };
       in {
@@ -92,6 +98,9 @@
           nixos-hardware.nixosModules.framework-16-7040-amd
           catppuccin.nixosModules.catppuccin
           stylix.nixosModules.stylix
+          ({ pkgs, ... }: {
+            environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
+          })
         ];
       };
     };
