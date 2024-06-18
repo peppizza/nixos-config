@@ -60,6 +60,7 @@
                 ];
               };
               home-manager.extraSpecialArgs = specialArgs;
+              home-manager.backupFileExtension = "bak";
             }
             catppuccin.nixosModules.catppuccin
             stylix.nixosModules.stylix
@@ -86,6 +87,7 @@
               ];
             };
             home-manager.extraSpecialArgs = specialArgs;
+            home-manager.backupFileExtension = "bak";
           }
           nixos-hardware.nixosModules.framework-16-7040-amd
           catppuccin.nixosModules.catppuccin
