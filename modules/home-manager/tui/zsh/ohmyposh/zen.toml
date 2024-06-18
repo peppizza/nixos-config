@@ -34,7 +34,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 [[blocks]]
   type = 'rprompt'
   overflow = 'hidden'
-  
+
   [[blocks.segments]]
     type = 'executiontime'
     style = 'plain'
