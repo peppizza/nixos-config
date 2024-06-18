@@ -50,7 +50,6 @@
 
   environment.systemPackages = with pkgs; [
     inputs.swww.packages.${pkgs.system}.swww
-    rustup
   ];
 
   fonts.packages = with pkgs; [
