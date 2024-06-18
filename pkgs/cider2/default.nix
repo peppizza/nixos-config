@@ -1,5 +1,5 @@
 { lib
-, fetchurl
+, requireFile
 , appimageTools
 }:
 
@@ -7,8 +7,9 @@ let
   pname = "cider";
   version = "2.4.1";
 
-  src = fetchurl {
-    url = "file://${./Cider-${version}.AppImage}";
+  src = requireFile {
+    name = "Cider-${version}.AppImage";
+    url = "https://cidercollective.itch.io/";
     sha256 = "a75347d75f90be4857acf9dfb28cec6e6ad8e19932550d70705a8b92657e47b7";
   };
 
