@@ -26,6 +26,7 @@
     ffmpeg-full
     mpv
     cinnamon.warpinator
+    man-pages
   ];
 
   programs.kdeconnect.enable = true;

@@ -49,6 +49,7 @@
         "hypridle"
         "blueman-applet"
         "swww-daemon"
+        "kdeconnectd"
       ];
 
       exec = "sleep 0.3; swww img ~/.config/wallpaper.png";
