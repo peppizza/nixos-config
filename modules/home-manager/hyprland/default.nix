@@ -148,6 +148,7 @@
       windowrulev2 = [
         "workspace 4, class:^(vesktop)$"
         "workspace 3, class:^(Cider)$"
+        "workspace 5, class:^(signal)$"
         "fullscreen, class:^(mpv)$"
         "opacity 0.93 0.93, class:^(Alacritty)$"
         "fullscreen, class:^(gamescope)"
@@ -188,6 +189,7 @@
         "$mainMod ALT, F, exec, dolphin"
         "$mainMod ALT, S, exec, cider --ozone-platform=wayland"
         "$mainMod ALT, S, exec, vesktop"
+        "$mainMod ALT, S, exec, signal-desktop"
         "$mainMod ALT, O, exec, gamemoderun gamescope -W 2560 -H 1600 -r 165 osu\\!"
 
         "$mainMod, O, togglefloating"

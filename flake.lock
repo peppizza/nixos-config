@@ -692,29 +692,8 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
-        "rust-overlay": "rust-overlay",
         "stylix": "stylix",
         "swww": "swww"
-      }
-    },
-    "rust-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1718681902,
-        "narHash": "sha256-E/T7Ge6ayEQe7FVKMJqDBoHyLhRhjc6u9CmU8MyYfy0=",
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "rev": "16c8ad83297c278eebe740dea5491c1708960dd1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "type": "github"
       }
     },
     "stylix": {
