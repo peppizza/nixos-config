@@ -39,6 +39,7 @@
       shellAliases = {
         c = "clear";
         ".." = "cd ..";
+        lg = "lazygit";
       };
 
       initExtra = ''
