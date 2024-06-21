@@ -20,7 +20,7 @@ rustPlatform.buildRustPackage rec {
   meta = with lib; {
     description = "A user mode daemon for automatically changing brightness based on light sensor value designed for modern laptops.";
     homepage = "https://github.com/peppizza/illuminanced";
-    maintainers = [ maintainers.peppizza ];
+    maintainers = with maintainers; [ mikhail-m1 peppizza ];
     platforms = [ "x86_64-linux" ];
   };
 
