@@ -49,7 +49,6 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
-    inputs.swww.packages.${pkgs.system}.swww
   ];
 
   fonts.packages = with pkgs; [
