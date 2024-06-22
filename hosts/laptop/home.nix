@@ -12,5 +12,7 @@
 
   stylix.targets.kde.enable = false;
 
+  services.batsignal.enable = true;
+
   programs.home-manager.enable = true;
 }
