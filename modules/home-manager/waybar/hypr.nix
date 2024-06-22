@@ -193,7 +193,17 @@
         height = 24;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "mpris" "idle_inhibitor" "network" "wireplumber" "backlight" "battery" "power-profiles-daemon" "tray" "clock" ];
+        modules-right = [
+          "mpris"
+          "idle_inhibitor"
+          "network"
+          "wireplumber"
+          "backlight"
+          "battery"
+          "power-profiles-daemon"
+          "tray"
+          "clock"
+        ];
 
         "wlr/workspaces" = {
           format = "{icon}";
@@ -235,7 +245,17 @@
 
         backlight = {
           format = "{icon}  {percent}%";
-          format-icons = [ "" "" "" "" "" "" "" "" "" ];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
         };
 
         battery = {
@@ -248,7 +268,13 @@
           format-charging = "󰂄  {capacity}%";
           format-plugged = "  {capacity}%";
           format-alt = "{icon}   {time}";
-          format-icons = [ "" "" "" "" "" ];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
         };
 
         power-profiles-daemon = {
@@ -279,7 +305,11 @@
           format-bluetooth-muted = "  {icon}  {node_name}";
           format-muted = " {node_name}";
           format-icons = {
-            default = [ "" "" "" ];
+            default = [
+              ""
+              ""
+              ""
+            ];
           };
           on-click = "alacritty -e pulsemixer";
           on-click-right = "helvum";

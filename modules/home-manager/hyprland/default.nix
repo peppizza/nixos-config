@@ -171,58 +171,64 @@
         ",XF86MonBrightnessDown, exec, brightnessctl -s set 25-"
       ];
 
-      bind = [
-        ",XF86AudioPlay, exec, playerctl -p \"playerctld\" play-pause"
-        ",XF86AudioPrev, exec, playerctl -p \"playerctld\" previous"
-        ",XF86AudioNext, exec, playerctl -p \"playerctld\" next"
-        ",XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
+      bind =
+        [
+          ",XF86AudioPlay, exec, playerctl -p \"playerctld\" play-pause"
+          ",XF86AudioPrev, exec, playerctl -p \"playerctld\" previous"
+          ",XF86AudioNext, exec, playerctl -p \"playerctld\" next"
+          ",XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
-        "SHIFT, Print, exec, slurp | grim -g - - | wl-copy"
-        ",Print, exec, grim - | wl-copy"
-        "$mainMod, P, exec, hyprpicker -a -f hex"
+          "SHIFT, Print, exec, slurp | grim -g - - | wl-copy"
+          ",Print, exec, grim - | wl-copy"
+          "$mainMod, P, exec, hyprpicker -a -f hex"
 
-        "$mainMod, Return, exec, alacritty"
-        "$mainModSHIFT, Q, killactive"
-        "$mainMod, D, exec, tofi-run | xargs -0 hyprctl dispatch exec"
-        "$mainMod, Q, exec, firefox"
-        "$mainMod, F1, exec, alacritty -e ncmpcpp"
-        "$mainMod ALT, F, exec, dolphin"
-        "$mainMod ALT, S, exec, cider --ozone-platform=wayland"
-        "$mainMod ALT, S, exec, vesktop"
-        "$mainMod ALT, S, exec, signal-desktop"
-        "$mainMod ALT, O, exec, gamemoderun gamescope -W 2560 -H 1600 -r 165 osu\\!"
+          "$mainMod, Return, exec, alacritty"
+          "$mainModSHIFT, Q, killactive"
+          "$mainMod, D, exec, tofi-run | xargs -0 hyprctl dispatch exec"
+          "$mainMod, Q, exec, firefox"
+          "$mainMod, F1, exec, alacritty -e ncmpcpp"
+          "$mainMod ALT, F, exec, dolphin"
+          "$mainMod ALT, S, exec, cider --ozone-platform=wayland"
+          "$mainMod ALT, S, exec, vesktop"
+          "$mainMod ALT, S, exec, signal-desktop"
+          "$mainMod ALT, O, exec, gamemoderun gamescope -W 2560 -H 1600 -r 165 osu\\!"
 
-        "$mainMod, O, togglefloating"
-        "$mainMod, F, fullscreen, 0"
-        "$mainMod, Space, togglesplit"
+          "$mainMod, O, togglefloating"
+          "$mainMod, F, fullscreen, 0"
+          "$mainMod, Space, togglesplit"
 
-        "$mainMod ALT, L, exec, loginctl lock-session"
+          "$mainMod ALT, L, exec, loginctl lock-session"
 
-        "$mainMod, h, movefocus, l"
-        "$mainMod, l, movefocus, r"
-        "$mainMod, k, movefocus, u"
-        "$mainMod, j, movefocus, d"
+          "$mainMod, h, movefocus, l"
+          "$mainMod, l, movefocus, r"
+          "$mainMod, k, movefocus, u"
+          "$mainMod, j, movefocus, d"
 
-        "$mainModSHIFT, h, movewindow, l"
-        "$mainModSHIFT, l, movewindow, r"
-        "$mainModSHIFT, k, movewindow, u"
-        "$mainModSHIFT, j, movewindow, d"
-      ] ++ (
-        # workspaces
-        # binds $mainMod + [shift +] {1..10} to [move to] workspace {1..10}
-        builtins.concatLists (builtins.genList (
-          x: let
-            ws = let
-              c = (x + 1) / 10;
-            in
-              builtins.toString (x + 1 - (c * 10));
-          in [
-            "$mainMod, ${ws}, workspace, ${toString (x + 1)}"
-            "$mainModSHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
-          ]
-        )
-        10)
-      );
+          "$mainModSHIFT, h, movewindow, l"
+          "$mainModSHIFT, l, movewindow, r"
+          "$mainModSHIFT, k, movewindow, u"
+          "$mainModSHIFT, j, movewindow, d"
+        ]
+        ++ (
+          # workspaces
+          # binds $mainMod + [shift +] {1..10} to [move to] workspace {1..10}
+          builtins.concatLists (
+            builtins.genList (
+              x:
+              let
+                ws =
+                  let
+                    c = (x + 1) / 10;
+                  in
+                  builtins.toString (x + 1 - (c * 10));
+              in
+              [
+                "$mainMod, ${ws}, workspace, ${toString (x + 1)}"
+                "$mainModSHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+              ]
+            ) 10
+          )
+        );
     };
   };
 }

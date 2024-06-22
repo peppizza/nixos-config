@@ -19,7 +19,7 @@
       shiftwidth = 2;
       number = true;
       showmode = false;
-      scrolloff=999;
+      scrolloff = 999;
       relativenumber = true;
     };
   };

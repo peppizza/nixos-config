@@ -41,19 +41,21 @@
   users.users.spencer = {
     isNormalUser = true;
     description = "Spencer Vess";
-    extraGroups = [ "wheel" "networkmanager" "input" "video" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "input"
+      "video"
+    ];
     shell = pkgs.zsh;
     initialPassword = "123456";
   };
 
   programs.firefox.enable = true;
 
-  environment.systemPackages = with pkgs; [
-  ];
+  environment.systemPackages = with pkgs; [ ];
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-  ];
+  fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
 
   environment.sessionVariables = {
     FLAKE = "/home/spencer/nixos-config";
@@ -81,7 +83,7 @@
 
   services.fwupd.enable = true;
 
-  security.pam.services.hyprlock = {};
+  security.pam.services.hyprlock = { };
 
   catppuccin.flavor = "mocha";
 
@@ -101,5 +103,8 @@
 
   system.stateVersion = "24.05"; # DO NOT CHANGE
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }

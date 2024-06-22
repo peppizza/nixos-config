@@ -4,15 +4,15 @@
 
 { pkgs, ... }:
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../../modules/nixos/locale.nix
-      ../../modules/nixos/display.nix
-      ../../modules/nixos/nvidia.nix
-      ../../modules/nixos/swap.nix
-      ../../modules/nixos/shared-packages.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../../modules/nixos/locale.nix
+    ../../modules/nixos/display.nix
+    ../../modules/nixos/nvidia.nix
+    ../../modules/nixos/swap.nix
+    ../../modules/nixos/shared-packages.nix
+  ];
 
   boot = {
     loader = {
@@ -34,7 +34,12 @@
   users.users.spencer = {
     isNormalUser = true;
     description = "Spencer Vess";
-    extraGroups = [ "wheel" "networkmanager" "input" "video" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "input"
+      "video"
+    ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     initialPassword = "123456";
   };
@@ -100,5 +105,8 @@
 
   system.stateVersion = "24.05"; # DO NOT EDIT
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }

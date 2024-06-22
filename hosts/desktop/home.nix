@@ -4,9 +4,7 @@
 
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
-  imports = [
-    ../../modules/home-manager/tui
-  ];
+  imports = [ ../../modules/home-manager/tui ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

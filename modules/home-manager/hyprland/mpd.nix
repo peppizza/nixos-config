@@ -1,8 +1,6 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    playerctl
-  ];
+  home.packages = with pkgs; [ playerctl ];
 
   programs.ncmpcpp = {
     enable = true;

@@ -21,7 +21,12 @@
     };
 
     keymaps = [
-      { mode = "n"; key = "<leader>gp"; action = "<cmd>Gitsigns preview_hunk<CR>"; options.silent = true; }
+      {
+        mode = "n";
+        key = "<leader>gp";
+        action = "<cmd>Gitsigns preview_hunk<CR>";
+        options.silent = true;
+      }
       {
         mode = "n";
         key = "<leader>gt";

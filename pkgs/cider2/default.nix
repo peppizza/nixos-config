@@ -1,6 +1,7 @@
-{ lib
-, requireFile
-, appimageTools
+{
+  lib,
+  requireFile,
+  appimageTools,
 }:
 
 let
@@ -20,16 +21,23 @@ let
     platforms = [ "x86_64-linux" ];
   };
 in
-  appimageTools.wrapType2 {
-    inherit pname version src meta;
+appimageTools.wrapType2 {
+  inherit
+    pname
+    version
+    src
+    meta
+    ;
 
-    extraInstallCommands =
-      let contents = appimageTools.extract { inherit pname version src; };
-      in ''
-        install -m 444 -D ${contents}/${pname}.desktop -t $out/share/applications
-        substituteInPlace $out/share/applications/${pname}.desktop \
-          --replace-fail 'Exec=AppRun' 'Exec=${pname}'
-        cp -r ${contents}/usr/share/icons $out/share
-      '';
+  extraInstallCommands =
+    let
+      contents = appimageTools.extract { inherit pname version src; };
+    in
+    ''
+      install -m 444 -D ${contents}/${pname}.desktop -t $out/share/applications
+      substituteInPlace $out/share/applications/${pname}.desktop \
+        --replace-fail 'Exec=AppRun' 'Exec=${pname}'
+      cp -r ${contents}/usr/share/icons $out/share
+    '';
 
-  }
+}

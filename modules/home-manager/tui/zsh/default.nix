@@ -71,7 +71,10 @@
     eza.enable = true;
 
     zoxide.enable = true;
-    zoxide.options = [ "--cmd" "cd" ];
+    zoxide.options = [
+      "--cmd"
+      "cd"
+    ];
 
     atuin.enable = true;
   };

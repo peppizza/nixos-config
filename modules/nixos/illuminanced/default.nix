@@ -1,8 +1,6 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    illuminanced
-  ];
+  environment.systemPackages = with pkgs; [ illuminanced ];
 
   systemd.services.illuminanced = {
     description = "Ambient light monitoring Service";
