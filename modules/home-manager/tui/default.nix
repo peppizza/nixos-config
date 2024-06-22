@@ -15,6 +15,8 @@
   ];
 
   programs.lazygit.enable = true;
+  programs.bat.enable = true;
+  home.shellAliases.cat = "bat";
 
   programs.fastfetch = {
     enable = true;
