@@ -21,10 +21,10 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    # hyprland = {
-    #   url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    hyprland = {
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     catppuccin.url = "github:catppuccin/nix";
 
