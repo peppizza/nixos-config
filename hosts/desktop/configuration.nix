@@ -12,6 +12,7 @@
     ../../modules/nixos/nvidia.nix
     ../../modules/nixos/swap.nix
     ../../modules/nixos/shared-packages.nix
+    ../../modules/nixos/nixsettings.nix
   ];
 
   boot = {
@@ -104,9 +105,4 @@
   };
 
   system.stateVersion = "24.05"; # DO NOT EDIT
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
 }

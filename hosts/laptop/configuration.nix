@@ -9,6 +9,7 @@
     ../../modules/nixos/shared-packages.nix
     ../../modules/nixos/hyprland.nix
     ../../modules/nixos/illuminanced
+    ../../modules/nixos/nixsettings.nix
   ];
 
   boot = {
@@ -102,9 +103,4 @@
   programs.gamemode.enable = true;
 
   system.stateVersion = "24.05"; # DO NOT CHANGE
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
 }
