@@ -27,6 +27,7 @@
     mpv
     cinnamon.warpinator
     man-pages
+    nixfmt-rfc-style
   ];
 
   programs.kdeconnect.enable = true;
