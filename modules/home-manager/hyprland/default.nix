@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ../waybar/hypr.nix
@@ -27,7 +27,7 @@
     hyprpicker
     brightnessctl
     wl-clipboard
-    swww
+    inputs.swww.packages.${pkgs.system}.swww
   ];
 
   xdg.configFile."wallpaper.png".source = ../../../wallpaper.png;

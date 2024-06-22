@@ -26,6 +26,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    swww = {
+      url = "github:LGFae/swww";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     catppuccin.url = "github:catppuccin/nix";
 
     stylix = {
