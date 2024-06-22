@@ -2,8 +2,10 @@
   description = "Nixos config flake";
 
   inputs = {
+    # Official package repositories
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
+    # Main flakes
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,6 +15,8 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
+      inputs.flake-compat.follows = "flake-compat";
+      inputs.git-hooks.follows = "git-hooks";
     };
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -28,6 +32,16 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
+      inputs.flake-compat.follows = "flake-compat";
+    };
+
+    # Libraries
+    flake-compat.url = "github:edolstra/flake-compat";
+
+    git-hooks = {
+      url = "github:cachix/git-hooks.nix";
+      inputs.flake-compat.follows = "flake-compat";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
