@@ -13,7 +13,10 @@
     ../../modules/nixos/swap.nix
     ../../modules/nixos/shared-packages.nix
     ../../modules/nixos/nixsettings.nix
+    ../../modules/nixos/sddm.nix
   ];
+
+  security.pam.services.sddm.kwallet.enable = true;
 
   boot = {
     loader = {

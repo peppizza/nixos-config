@@ -10,6 +10,7 @@
     ../../modules/nixos/hyprland.nix
     ../../modules/nixos/illuminanced
     ../../modules/nixos/nixsettings.nix
+    ../../modules/nixos/greetd.nix
   ];
 
   boot = {
@@ -24,6 +25,8 @@
     };
     kernelPackages = pkgs.linuxPackages_latest;
   };
+
+  security.pam.services.greetd.kwallet.enable = true;
 
   networking = {
     hostName = "nixos-laptop";
@@ -87,8 +90,6 @@
   security.pam.services.hyprlock = { };
 
   catppuccin.flavor = "mocha";
-
-  services.displayManager.sddm.catppuccin.enable = true;
 
   stylix = {
     enable = true;
