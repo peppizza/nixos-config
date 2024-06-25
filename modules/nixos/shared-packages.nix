@@ -28,6 +28,7 @@
     cinnamon.warpinator
     man-pages
     nixfmt-rfc-style
+    ungoogled-chromium
   ];
 
   programs.kdeconnect.enable = true;
