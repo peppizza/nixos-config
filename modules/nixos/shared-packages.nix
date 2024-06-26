@@ -29,6 +29,8 @@
     man-pages
     nixfmt-rfc-style
     ungoogled-chromium
+    yubikey-manager
+    yubikey-manager-qt
   ];
 
   programs.kdeconnect.enable = true;
