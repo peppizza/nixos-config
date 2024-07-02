@@ -31,6 +31,7 @@
     ungoogled-chromium
     yubikey-manager
     yubikey-manager-qt
+    (prismlauncher.override { withWaylandGLFW = true; })
   ];
 
   programs.kdeconnect.enable = true;

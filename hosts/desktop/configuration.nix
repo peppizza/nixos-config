@@ -55,7 +55,6 @@
   environment.systemPackages = with pkgs; [
     kicad
     bambu-studio
-    prismlauncher
     graalvm-ce
     ckb-next
   ];
