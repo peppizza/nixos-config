@@ -1,7 +1,7 @@
 {
   services.displayManager.sddm = {
-     enable = true;
-     wayland.enable = true;
-     autoNumlock = true;
-   };
+    enable = true;
+    wayland.enable = true;
+    autoNumlock = true;
+  };
 }
