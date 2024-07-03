@@ -43,6 +43,7 @@
       "networkmanager"
       "input"
       "video"
+      "docker"
     ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     initialPassword = "123456";
@@ -89,7 +90,14 @@
     };
   };
 
-  virtualisation.libvirtd.enable = true;
+  virtualisation = {
+    libvirtd.enable = true;
+    docker = {
+      enable = true;
+      storageDriver = "btrfs";
+    };
+  };
+
   programs.virt-manager.enable = true;
 
   hardware.ckb-next.enable = true;
