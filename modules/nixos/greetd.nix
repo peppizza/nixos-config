@@ -15,7 +15,7 @@ in
 
     username = lib.mkOption {
       type = lib.types.str;
-      default = "guest";
+      default = "spencer";
       description = "User to automatically login";
     };
   };
