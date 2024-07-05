@@ -83,16 +83,18 @@
               ./hosts/desktop/configuration.nix
               home-manager.nixosModules.home-manager
               {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.users.spencer = {
-                  imports = [
-                    ./hosts/desktop/home.nix
-                    catppuccin.homeManagerModules.catppuccin
-                  ];
+                home-manager = {
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+                  users.spencer = {
+                    imports = [
+                      ./hosts/desktop/home.nix
+                      catppuccin.homeManagerModules.catppuccin
+                    ];
+                  };
+                  extraSpecialArgs = specialArgs;
+                  backupFileExtension = "bak";
                 };
-                home-manager.extraSpecialArgs = specialArgs;
-                home-manager.backupFileExtension = "bak";
               }
               catppuccin.nixosModules.catppuccin
               stylix.nixosModules.stylix
@@ -110,16 +112,18 @@
               ./hosts/laptop/configuration.nix
               home-manager.nixosModules.home-manager
               {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.users.spencer = {
-                  imports = [
-                    ./hosts/laptop/home.nix
-                    catppuccin.homeManagerModules.catppuccin
-                  ];
+                home-manager = {
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+                  users.spencer = {
+                    imports = [
+                      ./hosts/laptop/home.nix
+                      catppuccin.homeManagerModules.catppuccin
+                    ];
+                  };
+                  extraSpecialArgs = specialArgs;
+                  backupFileExtension = "bak";
                 };
-                home-manager.extraSpecialArgs = specialArgs;
-                home-manager.backupFileExtension = "bak";
               }
               nixos-hardware.nixosModules.framework-16-7040-amd
               catppuccin.nixosModules.catppuccin
