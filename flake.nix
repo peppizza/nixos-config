@@ -15,8 +15,6 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
-      inputs.flake-compat.follows = "flake-compat";
-      inputs.git-hooks.follows = "git-hooks";
     };
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -35,16 +33,6 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
-      inputs.flake-compat.follows = "flake-compat";
-    };
-
-    # Libraries
-    flake-compat.url = "github:edolstra/flake-compat";
-
-    git-hooks = {
-      url = "github:cachix/git-hooks.nix";
-      inputs.flake-compat.follows = "flake-compat";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -84,9 +72,7 @@
                   useGlobalPkgs = true;
                   useUserPackages = true;
                   users.spencer = {
-                    imports = [
-                      ./hosts/desktop/home.nix
-                    ];
+                    imports = [ ./hosts/desktop/home.nix ];
                   };
                   extraSpecialArgs = specialArgs;
                   backupFileExtension = "bak";
@@ -111,9 +97,7 @@
                   useGlobalPkgs = true;
                   useUserPackages = true;
                   users.spencer = {
-                    imports = [
-                      ./hosts/laptop/home.nix
-                    ];
+                    imports = [ ./hosts/laptop/home.nix ];
                   };
                   extraSpecialArgs = specialArgs;
                   backupFileExtension = "bak";
