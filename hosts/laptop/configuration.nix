@@ -20,7 +20,6 @@
         enable = true;
         device = "nodev";
         efiSupport = true;
-        catppuccin.enable = true;
       };
     };
     kernelPackages = pkgs.linuxPackages_latest;
@@ -89,14 +88,9 @@
 
   security.pam.services.hyprlock = { };
 
-  catppuccin.flavor = "mocha";
-
   stylix = {
     enable = true;
     image = ../../wallpaper.png;
-    targets = {
-      grub.enable = false;
-    };
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
   };
 

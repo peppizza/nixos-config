@@ -106,8 +106,6 @@
 
   services.btrfs.autoScrub.enable = true;
 
-  catppuccin.flavor = "mocha";
-
   stylix = {
     enable = true;
     image = ../../wallpaper.png;

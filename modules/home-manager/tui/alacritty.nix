@@ -1,7 +1,7 @@
+{ lib, ... }:
 {
   programs.alacritty = {
     enable = true;
-    catppuccin.enable = true;
 
     settings = {
       live_config_reload = true;
@@ -11,7 +11,8 @@
         duration = 0;
       };
       colors.draw_bold_text_with_bright_colors = true;
-      font = {
+
+      font = lib.mkForce {
         bold = {
           family = "JetBrainsMono Nerd Font";
           style = "Bold";
@@ -34,5 +35,4 @@
       shell.program = "tmux";
     };
   };
-  stylix.targets.alacritty.enable = false;
 }

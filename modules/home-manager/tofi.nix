@@ -1,7 +1,6 @@
 {
   programs.tofi = {
     enable = true;
-    catppuccin.enable = true;
 
     settings = {
       anchor = "bottom";
@@ -27,5 +26,4 @@
       placeholder-text = "input";
     };
   };
-  stylix.targets.tofi.enable = false;
 }

@@ -31,8 +31,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    catppuccin.url = "github:catppuccin/nix";
-
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -56,7 +54,6 @@
       nixpkgs,
       home-manager,
       nixos-hardware,
-      catppuccin,
       stylix,
       ...
     }:
@@ -89,14 +86,12 @@
                   users.spencer = {
                     imports = [
                       ./hosts/desktop/home.nix
-                      catppuccin.homeManagerModules.catppuccin
                     ];
                   };
                   extraSpecialArgs = specialArgs;
                   backupFileExtension = "bak";
                 };
               }
-              catppuccin.nixosModules.catppuccin
               stylix.nixosModules.stylix
             ];
           };
@@ -118,7 +113,6 @@
                   users.spencer = {
                     imports = [
                       ./hosts/laptop/home.nix
-                      catppuccin.homeManagerModules.catppuccin
                     ];
                   };
                   extraSpecialArgs = specialArgs;
@@ -126,7 +120,6 @@
                 };
               }
               nixos-hardware.nixosModules.framework-16-7040-amd
-              catppuccin.nixosModules.catppuccin
               stylix.nixosModules.stylix
             ];
           };
