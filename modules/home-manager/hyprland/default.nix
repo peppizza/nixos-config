@@ -78,6 +78,7 @@
       misc = {
         enable_swallow = true;
         swallow_regex = "^(Alacritty)$";
+        vfr = true;
       };
 
       decoration = {
