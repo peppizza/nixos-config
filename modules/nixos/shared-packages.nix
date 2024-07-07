@@ -32,6 +32,7 @@
     yubikey-manager
     yubikey-manager-qt
     (prismlauncher.override { withWaylandGLFW = true; })
+    cider2
   ];
 
   programs.kdeconnect.enable = true;

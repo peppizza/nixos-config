@@ -45,7 +45,9 @@
       stylix,
       ...
     }:
-    {
+    rec {
+      overlays = import ./overlays { inherit inputs; };
+
       nixosConfigurations =
         let
           system = "x86_64-linux";
@@ -53,7 +55,7 @@
           pkgs = import nixpkgs {
             inherit system;
             config.allowUnfree = true;
-            overlays = [ (self: super: { illuminanced = super.callPackage ./pkgs/illuminanced { }; }) ];
+            overlays = builtins.attrValues overlays;
           };
         in
         {
