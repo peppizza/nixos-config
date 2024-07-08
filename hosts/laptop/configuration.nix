@@ -26,7 +26,7 @@
   };
 
   autoLogin.enable = true;
-  security.pam.services.greetd.kwallet.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   networking = {
     hostName = "nixos-laptop";
