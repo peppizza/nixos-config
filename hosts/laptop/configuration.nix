@@ -25,6 +25,7 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
+  autoLogin.enable = true;
   security.pam.services.greetd.kwallet.enable = true;
 
   networking = {
