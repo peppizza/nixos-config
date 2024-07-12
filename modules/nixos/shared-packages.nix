@@ -33,6 +33,7 @@
     yubikey-manager-qt
     (prismlauncher.override { withWaylandGLFW = true; })
     cider2
+    gimp
   ];
 
   programs.kdeconnect.enable = true;
