@@ -52,7 +52,15 @@
         let
           system = "x86_64-linux";
 
-          pkgs = import nixpkgs {
+          nixpkgs-patched = (import nixpkgs {
+            inherit system;
+          }).applyPatches {
+            name = "nixpkgs-patched";
+            src = nixpkgs;
+            patches = [ ./patches/kicad-pin.patch ];
+          };
+
+          pkgs = import nixpkgs-patched {
             inherit system;
             config.allowUnfree = true;
             overlays = builtins.attrValues overlays;
