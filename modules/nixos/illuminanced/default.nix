@@ -1,5 +1,5 @@
 {
-  imports = [./illuminanced.nix];
+  imports = [ ./illuminanced.nix ];
 
   services.illuminanced = {
     enable = true;

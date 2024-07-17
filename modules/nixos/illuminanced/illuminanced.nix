@@ -32,7 +32,7 @@ in
   config = lib.mkIf cfg.enable {
     assertions = [
       {
-        assertion = cfg.settings != {};
+        assertion = cfg.settings != { };
         message = "The .settings attribute must be set";
       }
     ];
