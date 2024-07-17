@@ -52,9 +52,7 @@
         let
           system = "x86_64-linux";
 
-          nixpkgs-patched = (import nixpkgs {
-            inherit system;
-          }).applyPatches {
+          nixpkgs-patched = (import nixpkgs { inherit system; }).applyPatches {
             name = "nixpkgs-patched";
             src = nixpkgs;
             patches = [ ./patches/kicad-pin.patch ];
