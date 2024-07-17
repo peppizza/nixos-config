@@ -1,0 +1,23 @@
+[package]
+name = "illuminanced"
+version = "1.0.0"
+authors = ["Mikhail Modin <mikhailm1@gmail.com>", "Spencer Vess <spencervess@protonmail.com>"]
+
+[[bin]]
+name = "illuminanced"
+path = "src/main.rs"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+
+[dependencies]
+daemonize = "0.5"
+syslog = "6.1"
+log = "0.4"
+simplelog ="0.12"
+getopts = "0.2"
+toml="0.8"
+glob = "0.3"
+libc = "0.2"
