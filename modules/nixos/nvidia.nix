@@ -12,7 +12,7 @@
     powerManagement.enable = true;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.beta;
-    open = false;
+    open = true;
   };
 
   boot.initrd.kernelModules = [
