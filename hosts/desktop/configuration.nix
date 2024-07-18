@@ -14,6 +14,7 @@
     ../../modules/nixos/shared-packages.nix
     ../../modules/nixos/nixsettings.nix
     ../../modules/nixos/sddm.nix
+    ../../modules/nixos/udev
   ];
 
   security.pam.services.sddm.kwallet.enable = true;
