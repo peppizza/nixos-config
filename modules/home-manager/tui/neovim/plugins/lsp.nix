@@ -26,14 +26,11 @@
           lua-ls.enable = true;
           tsserver.enable = true;
           ccls.enable = true;
-          rust-analyzer = {
-            enable = true;
-            installCargo = true;
-            installRustc = true;
-          };
           cmake.enable = true;
         };
       };
+
+      rustaceanvim.enable = true;
     };
   };
 }
