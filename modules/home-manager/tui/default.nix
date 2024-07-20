@@ -6,6 +6,7 @@
     ./zsh
     ./neovim
     ./btop.nix
+    ./yazi.nix
   ];
 
   home.packages = with pkgs; [
