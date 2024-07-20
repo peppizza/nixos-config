@@ -28,6 +28,8 @@
 
     extraConfig = ''
       set-option -ga terminal-overrides ",xterm-256color:Tc"
+      set-option -g default-terminal "screen-256color"
+
       bind -n M-H previous-window
       bind -n M-L next-window
       bind '"' split-window -v -c "#{pane_current_path}"
