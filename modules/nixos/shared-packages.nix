@@ -25,7 +25,7 @@
     wayland-utils
     ffmpeg-full
     mpv
-    cinnamon.warpinator
+    warpinator
     man-pages
     nixfmt-rfc-style
     ungoogled-chromium
