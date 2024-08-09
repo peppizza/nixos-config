@@ -27,7 +27,7 @@
     hyprpicker
     brightnessctl
     wl-clipboard
-    inputs.swww.packages.${pkgs.system}.swww
+    swww
   ];
 
   xdg.configFile."wallpaper.png".source = ../../../wallpaper.png;
