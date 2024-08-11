@@ -84,7 +84,8 @@
       #mode,
       #idle_inhibitor,
       #mpris,
-      #power-profiles-daemon {
+      #power-profiles-daemon
+      #keyboard-state {
         margin: 2px;
         padding-left: 5px;
         padding-right: 7px;
@@ -202,8 +203,22 @@
           "battery"
           "power-profiles-daemon"
           "tray"
+          "keyboard-state"
           "clock"
         ];
+
+        keyboard-state = {
+          numlock = true;
+          capslock = true;
+          format = {
+            numlock = "N {icon}";
+            capslock = "C {icon}";
+          };
+          format-icons = {
+            locked = " ";
+            unlocked = " ";
+          };
+        };
 
         "wlr/workspaces" = {
           format = "{icon}";
