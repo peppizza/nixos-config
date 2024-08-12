@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ../waybar/hypr.nix
@@ -150,7 +150,7 @@
       windowrulev2 = [
         "workspace 4, class:^(vesktop)$"
         "workspace 3, class:^(Cider)$"
-        "workspace 5, class:^(signal)$"
+        "workspace 3, class:^(signal)$"
         "fullscreen, class:^(mpv)$"
         "opacity 0.93 0.93, class:^(Alacritty)$"
         "fullscreen, class:^(gamescope)"
