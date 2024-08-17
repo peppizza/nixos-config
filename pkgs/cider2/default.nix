@@ -6,12 +6,12 @@
 
 let
   pname = "cider";
-  version = "2.4.1";
+  version = "2.5.0";
 
   src = requireFile {
     name = "Cider-${version}.AppImage";
     url = "https://cidercollective.itch.io/";
-    sha256 = "a75347d75f90be4857acf9dfb28cec6e6ad8e19932550d70705a8b92657e47b7";
+    sha256 = "sha256-HwfByY8av1AvI+t7wnaNbhDLXBxgzRKYiLG1hPUto9o=";
   };
 
   meta = with lib; {
