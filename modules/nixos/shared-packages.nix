@@ -34,6 +34,7 @@
     (prismlauncher.override { withWaylandGLFW = true; })
     cider2
     gimp
+    ani-cli
   ];
 
   programs.kdeconnect.enable = true;
