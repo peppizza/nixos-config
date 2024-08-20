@@ -28,6 +28,7 @@
     brightnessctl
     wl-clipboard
     swww
+    pulseaudio
   ];
 
   xdg.configFile."wallpaper.png".source = ../../../wallpaper.png;
