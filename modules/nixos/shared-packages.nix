@@ -35,6 +35,7 @@
     cider2
     gimp
     ani-cli
+    wine64
   ];
 
   programs.kdeconnect.enable = true;
