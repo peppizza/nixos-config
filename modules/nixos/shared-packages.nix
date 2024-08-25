@@ -35,6 +35,7 @@
     gimp
     ani-cli
     wine64
+    onlyoffice-bin
   ];
 
   programs.kdeconnect.enable = true;
