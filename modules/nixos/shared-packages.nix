@@ -12,7 +12,6 @@
     nix-output-monitor
     nvd
     protonmail-bridge-gui
-    wootility
     filelight
     qalculate-qt
     osu-lazer-bin

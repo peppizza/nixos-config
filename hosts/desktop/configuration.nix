@@ -59,7 +59,6 @@
     kicad
     bambu-studio
     graalvm-ce
-    ckb-next
   ];
 
   fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
@@ -101,8 +100,6 @@
   };
 
   programs.virt-manager.enable = true;
-
-  hardware.ckb-next.enable = true;
 
   services.system76-scheduler.enable = true;
 
