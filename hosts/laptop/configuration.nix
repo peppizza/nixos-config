@@ -30,8 +30,7 @@
 
   networking = {
     hostName = "nixos-laptop";
-    networkmanager.wifi.backend = "iwd";
-    wireless.iwd.settings.Settings.AutoConnect = true;
+    networkmanager.enable = true;
   };
 
   hardware.bluetooth = {
