@@ -59,6 +59,7 @@
     kicad
     bambu-studio
     graalvm-ce
+    qbittorrent
   ];
 
   fonts.packages = with pkgs; [ (nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
