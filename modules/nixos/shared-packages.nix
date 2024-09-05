@@ -34,7 +34,9 @@
     cider2
     gimp
     ani-cli
-    wine64
+    wineWowPackages.waylandFull
+    winetricks
+    wineasio
     onlyoffice-bin
   ];
 
