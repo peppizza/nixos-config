@@ -30,7 +30,7 @@
     ungoogled-chromium
     yubikey-manager
     yubikey-manager-qt
-    (prismlauncher.override { withWaylandGLFW = true; })
+    prismlauncher
     cider2
     gimp
     ani-cli
