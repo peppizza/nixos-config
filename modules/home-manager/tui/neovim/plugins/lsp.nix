@@ -23,8 +23,8 @@
         };
 
         servers = {
-          lua-ls.enable = true;
-          tsserver.enable = true;
+          lua_ls.enable = true;
+          ts_ls.enable = true;
           ccls.enable = true;
           cmake.enable = true;
         };

@@ -4,7 +4,7 @@
     enable = true;
 
     settings = {
-      live_config_reload = true;
+      general.live_config_reload = true;
       mouse.hide_when_typing = true;
       bell = {
         animation = "EaseOutExpo";
@@ -32,7 +32,7 @@
         startup_mode = "Maximized";
       };
 
-      shell.program = "tmux";
+      terminal.shell.program = "tmux";
     };
   };
 }

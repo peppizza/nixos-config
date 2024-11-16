@@ -38,8 +38,10 @@
     plugins = {
       lualine = {
         enable = true;
-        theme = "dracula";
+        settings.options.theme = "dracula";
       };
+
+      web-devicons.enable = true;
 
       gitsigns.enable = true;
 

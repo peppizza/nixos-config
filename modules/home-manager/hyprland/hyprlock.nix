@@ -1,10 +1,11 @@
+{ lib, ... }:
 {
   programs.hyprlock = {
     enable = true;
     settings = {
       # BACKGROUND
       background = {
-        path = "~/.config/wallpaper.png";
+        path = lib.mkForce "~/.config/wallpaper.png";
         blur_passes = 3;
         contrast = 0.8916;
         brightness = 0.8172;
@@ -26,9 +27,9 @@
         dots_size = 0.2;
         dots_spacing = 0.2;
         dots_center = true;
-        outer_color = "rgba(0, 0, 0, 0)";
-        inner_color = "rgba(0, 0, 0, 0.5)";
-        font_color = "rgb(200, 200, 200)";
+        outer_color = lib.mkForce "rgba(0, 0, 0, 0)";
+        inner_color = lib.mkForce "rgba(0, 0, 0, 0.5)";
+        font_color = lib.mkForce "rgb(200, 200, 200)";
         fade_on_empty = false;
         font_family = "JetBrains Mono Nerd Font Mono";
         placeholder_text = "<i><span foreground=\"##cdd6f4\">Input Password...</span></i>";
