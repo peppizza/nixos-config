@@ -2,11 +2,13 @@
   programs.nixvim.plugins.floaterm = {
     enable = true;
 
-    width = 0.8;
-    height = 0.8;
+    settings = {
+      keymap_toggle = "<leader>,";
 
-    title = "";
+      width = 0.8;
+      height = 0.8;
 
-    keymaps.toggle = "<leader>,";
+      title = "";
+    };
   };
 }

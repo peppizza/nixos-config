@@ -6,12 +6,12 @@
 
 let
   pname = "cider";
-  version = "2.5.0";
+  version = "2.6.0";
 
   src = requireFile {
     name = "Cider-${version}.AppImage";
     url = "https://cidercollective.itch.io/";
-    sha256 = "sha256-HwfByY8av1AvI+t7wnaNbhDLXBxgzRKYiLG1hPUto9o=";
+    sha256 = "sha256-BbS6bpODJyQu01N22j4tiZ8qMdnNMwGLltbFFok5fqE=";
   };
 
   meta = with lib; {
@@ -34,9 +34,7 @@ appimageTools.wrapType2 {
       contents = appimageTools.extract { inherit pname version src; };
     in
     ''
-      install -m 444 -D ${contents}/${pname}.desktop -t $out/share/applications
-      substituteInPlace $out/share/applications/${pname}.desktop \
-        --replace-fail 'Exec=AppRun' 'Exec=${pname}'
+      install -m 444 -D ${contents}/Cider.desktop -t $out/share/applications
       cp -r ${contents}/usr/share/icons $out/share
     '';
 
