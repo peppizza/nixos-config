@@ -142,7 +142,6 @@
       };
 
       windowrule = [
-        "float, tile:^(VimWiki)$"
         "float, class:.*.exe"
         "float, class:steam_app_.*"
         "float, class:steam_proton"

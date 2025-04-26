@@ -12,7 +12,7 @@
     nix-output-monitor
     nvd
     protonmail-bridge-gui
-    filelight
+    kdePackages.filelight
     qalculate-qt
     osu-lazer-bin
     nvme-cli
@@ -28,10 +28,9 @@
     man-pages
     nixfmt-rfc-style
     ungoogled-chromium
-    yubikey-manager
-    yubikey-manager-qt
+    yubioath-flutter
     prismlauncher
-    cider2
+    # cider2
     gimp
     ani-cli
     wineWowPackages.waylandFull
